@@ -1,6 +1,7 @@
-image: ubuntu:latest
+image: ruby:latest
 
 before_script:
+  - apt install -y nodejs
   - gem install bundler
   - bundle install
 
