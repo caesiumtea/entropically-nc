@@ -199,7 +199,7 @@ footer {
     /* display: flex;
     gap: 1rem; */
     margin-top: 2rem;
-    padding: 0.7rem 2rem;
+    padding: 0rem 2rem;
     background-color: var(--color-bg-second);
     text-align: center;
 }
