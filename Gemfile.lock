@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  neocities
+
+BUNDLED WITH
+   2.6.5
