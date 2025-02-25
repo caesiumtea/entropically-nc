@@ -2,6 +2,7 @@ image: ruby:latest
 
 before_script:
   - apt-get update && apt-get install -y nodejs
+  - apt-get install -y npm
   - gem install bundler
   - bundle install
 
