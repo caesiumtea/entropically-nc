@@ -11,6 +11,7 @@ neocities:
   environment: neocities
   script:
     # If you use a static site builder, add its build command here
+    - npm install
     - npm run build
 
     # Place user-provide token
