@@ -1,24 +1,150 @@
-html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
+/* CSS reset - modified from Andy Bell */
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
 }
 
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Set core body defaults */
 body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
+    min-height: 100vh;
     line-height: 1.5;
 }
 
-* {
-    box-sizing: border-box;
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* end CSS reset */
+
+/* variables */
+:root {
+    --color-bg-primary: #331D41;
+    /* dark purple */
+    --color-bg-second: #003f5c;
+    /* dark blue */
+    --color-text-primary: #ffb9a3;
+    /* light coral */
+    --color-text-second: #ff6361;
+    /* coral */
+    --color-accent-1: #ffa600;
+    /* gold */
+    --color-accent-2: #bc5090;
+    /* light mauve */
+    --color-accent-3: #8a508f;
+    /* dark mauve */
+    --color-accent-4: #58508d;
+    /* purple */
+    --font-main: Jost, Verdana, Geneva, Tahoma, sans-serif;
+    --font-accent: Eczar, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    margin: 0 auto;
+    line-height: 1.5;
+    /* display: grid;
+    grid-template-columns: 1fr 80ch 1fr; */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin: 0 auto;
+    padding: 1.5rem;
+    max-width: 80ch;
+    border-left: 5px solid var(--color-bg-second);
+    border-right: 5px solid var(--color-bg-second);
+}
+
+section {
+    margin: 2rem 0;
 }
 
 h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
+    color: var(--color-accent-1);
+    font-weight: normal;
+    font-family: var(--font-accent);
 }
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-text-second);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-accent);
+    font-weight: normal;
+}
+
+a {
+    color: var(--color-text-second);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-accent-1);
+}
+
+p {
+    margin: 1rem 0;
+}
+
 /* nav styles */
 
 .nav-links {
@@ -37,12 +163,6 @@ h1 {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    text-transform: uppercase;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-    background-color: #ff9776;
 }
 
 .expanded {
@@ -59,10 +179,40 @@ h1 {
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #ff9776;
+    background-color: var(--color-text-second);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin: 0.25em;
+    border: dotted 2px var(--color-accent-2);
+    border-radius: 0.5em;
+    padding: 0.3em 0.7em;
+    font-size: 1.15em;
+}
+
+footer {
+    /* display: flex;
+    gap: 1rem; */
+    margin-top: 2rem;
+    padding: 0.7rem 2rem;
+    background-color: var(--color-bg-second);
+    text-align: center;
+}
+
+footer a {
+    /* padding: 0.5rem 1rem; */
+    color: var(--color-text-second);
 }
 
 @media screen and (min-width: 636px) {
+    main {
+        min-width: 80ch;
+    }
     .nav-links {
         margin-left: 5em;
         display: block;
