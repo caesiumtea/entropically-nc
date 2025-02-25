@@ -2,7 +2,6 @@ image: ruby:latest
 
 before_script:
   - gem install bundler
-  - bundle config set --local deployment true
   - bundle install
 
 neocities:
