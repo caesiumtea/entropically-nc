@@ -30,6 +30,10 @@ document.querySelector('#select-font').addEventListener('change', () => {
         window.localStorage.setItem('font', 'dyslexic');
         document.documentElement.style.setProperty('--font-main', 'OpenDyslexic, Arial, Helvetica, sans-serif ');
         document.documentElement.style.setProperty('--font-accent', 'OpenDyslexic, Arial, Helvetica, sans-serif');
+    } else if (font === "pixel") {
+        window.localStorage.setItem('font', 'pixel');
+        document.documentElement.style.setProperty('--font-main', 'Monogram, Iosevka, Verdana, Geneva, Tahoma, sans-serif');
+        document.documentElement.style.setProperty('--font-accent', 'Monogram, Eczar, Cambria, Cochin, Georgia, Times, "Times New Roman", serif');
     } else {
         window.localStorage.setItem('font', 'default');
         document.documentElement.style.setProperty('--font-main', 'Iosevka, Verdana, Geneva, Tahoma, sans-serif');

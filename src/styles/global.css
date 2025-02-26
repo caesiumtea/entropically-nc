@@ -105,6 +105,20 @@ textarea:not([rows]) {
     src: url("fonts/IosevkaAile-BoldItalic.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Monogram";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/monogram-extended.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Monogram";
+    font-weight: normal;
+    font-style: italic;
+    src: url("/fonts/monogram-extended-italic.ttf") format("truetype");
+}
+
 /* variables */
 :root {
     --color-bg-primary: #331D41; /* dark purple */
