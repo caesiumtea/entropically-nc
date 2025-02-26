@@ -71,24 +71,17 @@ textarea:not([rows]) {
 
 /* variables */
 :root {
-    --color-bg-primary: #331D41;
-    /* dark purple */
-    --color-bg-second: #003f5c;
-    /* dark blue */
-    --color-text-primary: #ffb9a3;
-    /* light coral */
-    --color-text-second: #ff6361;
-    /* coral */
-    --color-accent-1: #ffa600;
-    /* gold */
-    --color-accent-2: #bc5090;
-    /* light mauve */
-    --color-accent-3: #8a508f;
-    /* dark mauve */
-    --color-accent-4: #58508d;
-    /* purple */
+    --color-bg-primary: #331D41; /* dark purple */
+    --color-bg-second: #003f5c; /* dark blue */
+    --color-text-primary: #ffb9a3; /* light coral */
+    --color-text-second: #ff6361; /* coral */
+    --color-accent-1: #ffa600; /* gold */
+    --color-accent-2: #bc5090; /* light mauve */
+    --color-accent-3: #8a508f; /* dark mauve */
+    --color-accent-4: #58508d; /* purple */
     --font-main: Jost, Verdana, Geneva, Tahoma, sans-serif;
     --font-accent: Eczar, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font-code: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -146,6 +139,35 @@ p {
     margin: 1rem 0;
 }
 
+em {
+    color: var(--color-accent-1);
+}
+
+footer {
+    /* display: flex;
+    gap: 1rem; */
+    margin-top: 2rem;
+    padding: 0rem 2rem;
+    background-color: var(--color-bg-second);
+    text-align: center;
+}
+
+footer a {
+    /* padding: 0.5rem 1rem; */
+    color: var(--color-text-second);
+}
+
+code {
+    font-family: var(--font-code);
+    background-color: var(--color-bg-second);
+    color: var(--color-text-second);
+}
+
+.code {
+    font-family: var(--font-code);
+}
+
+
 
 /* nav styles */
 
@@ -182,24 +204,6 @@ p {
     height: 5px;
     margin-bottom: 10px;
     background-color: var(--color-text-second);
-}
-
-footer {
-    /* display: flex;
-    gap: 1rem; */
-    margin-top: 2rem;
-    padding: 0rem 2rem;
-    background-color: var(--color-bg-second);
-    text-align: center;
-}
-
-footer a {
-    /* padding: 0.5rem 1rem; */
-    color: var(--color-text-second);
-}
-
-.code {
-    font-family: 'Courier New', Courier, monospace;
 }
 
 /* page specific */

@@ -16,5 +16,18 @@ const blog = defineCollection({
         tags: z.array(z.string())
     })
 });
+const tuts = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/tuts-md" }),
+    schema: z.object({
+        title: z.string(),
+        pubDate: z.date(),
+        description: z.string(),
+        image: z.object({
+            url: z.string(),
+            alt: z.string()
+        }),
+        tags: z.array(z.string())
+    })
+});
 // Export a single `collections` object to register your collection(s)
-export const collections = { blog };
+export const collections = { blog, tuts };

@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+const pageTitle = "website tips and tutorials";
+const allPosts = await getCollection("tuts");
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <p>
+        some advice and tutorials for web dev, particularly for making neocities
+        pages and/or for folks who are new to web dev!
+    </p>
+    <p>.....coming soon....</p>
+    <ul>
+        {
+            allPosts.map((post: any) => (
+                <BlogPost
+                    url={`/tutorials/${post.id}/`}
+                    title={post.data.title}
+                />
+            ))
+        }
+    </ul>
+</BaseLayout>

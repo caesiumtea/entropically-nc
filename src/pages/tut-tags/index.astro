@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "tutorial tags index";
+const allPosts = await getCollection("tuts");
+
+const tags = [
+    ...new Set(allPosts.map((post: any) => post.data.tags).flat()),
+];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <div class="tags">
+        {
+            tags.map((tag) => (
+                <p class="tag">
+                    <a href={`/tut-tags/${tag}`}>{tag}</a>
+                </p>
+            ))
+        }
+    </div>
+</BaseLayout>
