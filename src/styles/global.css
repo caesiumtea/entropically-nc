@@ -69,20 +69,58 @@ textarea:not([rows]) {
 
 /* end CSS reset */
 
+/* fonts */
+
+/* font url from this codepen: https://codepen.io/cornetespoir/pen/ppBLQa */
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url('https://dl.dropboxusercontent.com/s/qfpakpjedhsrdb9/OpenDyslexicAlta-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "Iosevka";
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/IosevkaAile-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Iosevka";
+    font-weight: bold;
+    font-style: normal;
+    src: url("fonts/IosevkaAile-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Iosevka";
+    font-weight: normal;
+    font-style: italic;
+    src: url("fonts/IosevkaAile-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Iosevka";
+    font-weight: bold;
+    font-style: italic;
+    src: url("fonts/IosevkaAile-BoldItalic.ttf") format("truetype");
+}
+
 /* variables */
 :root {
     --color-bg-primary: #331D41; /* dark purple */
     --color-bg-second: #003f5c; /* dark blue */
+    --color-bg-third: #00202e; /* darkest blue */
     --color-text-primary: #ffb9a3; /* light coral */
     --color-text-second: #ff6361; /* coral */
     --color-accent-1: #ffa600; /* gold */
     --color-accent-2: #bc5090; /* light mauve */
     --color-accent-3: #8a508f; /* dark mauve */
     --color-accent-4: #58508d; /* purple */
-    --font-main: Jost, Verdana, Geneva, Tahoma, sans-serif;
+    --font-main: Iosevka, Verdana, Geneva, Tahoma, sans-serif;
     --font-accent: Eczar, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --font-code: 'Courier New', Courier, monospace;
 }
+
 
 body {
     font-family: var(--font-main);
@@ -168,8 +206,23 @@ code {
     color: var(--color-text-second);
 }
 
+select {
+    background-color: var(--color-text-primary);
+    border: 1px solid var(--color-accent-2);
+    color: var(--color-bg-primary);
+    border-radius: 3px;
+}
+
+option {
+    background-color: var(--color-text-primary);
+}
+
 .code {
     font-family: var(--font-code);
+}
+
+.small-text {
+    font-size: 75%;
 }
 
 /* source: https://webaim.org/techniques/css/invisiblecontent/ */
@@ -180,6 +233,10 @@ code {
     width:1px;
     height:1px;
     overflow:hidden;
+}
+
+.dyslexic {
+    font-family: OpenDyslexic, Arial, Helvetica, sans-serif;
 }
 
 
@@ -249,7 +306,7 @@ code {
     background-color: var(--color-accent-1);
     color: var(--color-bg-second);
     width: fit-content;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem;
     position: fixed;
     right: 0;
     top: 5px;
@@ -289,13 +346,16 @@ code {
     text-decoration: underline;
     cursor: pointer;
     border: 0;
+    margin-top: 1rem;
 }
 
-#access-menu span {
+#access-menu span, #access-menu label {
     display: block;
-    font-size: 75%;
 }
 
+#access-menu label {
+    margin-top: 1rem;
+}
 
 /* page specific */
 

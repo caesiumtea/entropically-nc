@@ -33,6 +33,7 @@ const { pageTitle } = Astro.props;
         </div>
         <script>
             import "../scripts/menu.js";
+            import "../scripts/font.js";
         </script>
         <script type="text/javascript" is:inline id="cursor-script">
             // Cursor sparkles effect by RV: http://www.mf2fm.com/rv/dhtmltinkerbell.php
@@ -42,7 +43,6 @@ const { pageTitle } = Astro.props;
             let animateCursor = (() => {
                 const localStorageCursor = localStorage?.getItem("animate-cursor") ?? "true";
                 if (localStorageCursor === "true") {
-                    console.log("got localstorage cursor setting:", localStorageCursor);
                     return true;
                 } else if (localStorageCursor === "false") {
                     return false;
@@ -52,10 +52,8 @@ const { pageTitle } = Astro.props;
                 }
                 return true;
             })();
-            console.log(animateCursor);
 
             if (animateCursor) {
-                console.log("animate cursor true");
                 document.querySelector('#access-cursor').textContent = "disable cursor animation";
             } else {
                 console.log("animate cursor false");
