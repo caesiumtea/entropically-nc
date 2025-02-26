@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import AccessMenu from "../components/AccessMenu.astro";
 import "../styles/global.css";
 
 const { pageTitle } = Astro.props;
@@ -21,20 +22,46 @@ const { pageTitle } = Astro.props;
         <title>{pageTitle}</title>
     </head>
     <body>
-        <Header />
-        <main>
-            <h1>{pageTitle}</h1>
-            <slot />
-        </main>
-        <Footer />
+        <AccessMenu />
+        <div id="page-container">
+            <Header />
+            <main>
+                <h1>{pageTitle}</h1>
+                <slot />
+            </main>
+            <Footer />
+        </div>
         <script>
             import "../scripts/menu.js";
         </script>
-        <script type="text/javascript" is:inline>
+        <script type="text/javascript" is:inline id="cursor-script">
             // Cursor sparkles effect by RV: http://www.mf2fm.com/rv/dhtmltinkerbell.php
 
             // Note: script only works when inline, for some reason
-            
+
+            let animateCursor = (() => {
+                const localStorageCursor = localStorage?.getItem("animate-cursor") ?? "true";
+                if (localStorageCursor === "true") {
+                    console.log("got localstorage cursor setting:", localStorageCursor);
+                    return true;
+                } else if (localStorageCursor === "false") {
+                    return false;
+                }
+                if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    return false;
+                }
+                return true;
+            })();
+            console.log(animateCursor);
+
+            if (animateCursor) {
+                console.log("animate cursor true");
+                document.querySelector('#access-cursor').textContent = "disable cursor animation";
+            } else {
+                console.log("animate cursor false");
+                document.querySelector('#access-cursor').textContent = "enable cursor animation";
+            }
+
             // <![CDATA[
             var colour = "random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
             var sparkles = 50;
@@ -60,7 +87,7 @@ const { pageTitle } = Astro.props;
             var tinyv = new Array();
 
             window.onload = function () {
-                if (document.getElementById) {
+                if (document.getElementById && animateCursor) {
                     var i, rats, rlef, rdow;
                     for (var i = 0; i < sparkles; i++) {
                         var rats = createDiv(3, 3);
@@ -246,9 +273,11 @@ const { pageTitle } = Astro.props;
 
             function newColour() {
                 var c = new Array();
-                c[0] = 255;
-                c[1] = Math.floor(Math.random() * 256);
-                c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+                // vae's edit: random * 128 + 128 to make it pastel
+                c[0] = Math.floor(Math.random() * 128 + 128);
+                c[1] = Math.floor(Math.random() * 128 + 128);
+                c[2] = Math.floor(Math.random() * 128 + 128);
+                // c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
                 c.sort(function () {
                     return 0.5 - Math.random();
                 });

@@ -88,12 +88,17 @@ body {
     font-family: var(--font-main);
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
-    margin: 0 auto;
     line-height: 1.5;
     /* display: grid;
     grid-template-columns: 1fr 80ch 1fr; */
+    position: relative;
+}
+
+#page-container {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+
 }
 
 main {
@@ -167,6 +172,15 @@ code {
     font-family: var(--font-code);
 }
 
+/* source: https://webaim.org/techniques/css/invisiblecontent/ */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
 
 
 /* nav styles */
@@ -205,6 +219,83 @@ code {
     margin-bottom: 10px;
     background-color: var(--color-text-second);
 }
+
+/* accessibility menu */
+#access-icon {
+    background-color: var(--color-accent-1);
+    position: fixed;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+    border: solid 1px var(--color-accent-3);
+    border-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#access-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+#access-icon:focus {
+    background-color: var(--color-text-second);
+    border-color: var(--color-text-primary);
+}
+
+#access-menu {
+    background-color: var(--color-accent-1);
+    color: var(--color-bg-second);
+    width: fit-content;
+    padding: 0 2rem;
+    position: fixed;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+    border: solid 1px var(--color-accent-3);
+    border-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    
+}
+
+#access-menu h1 {
+    font-size: 1rem;
+    font-family: var(--font-main);
+    font-weight: bold;
+    color: var(--color-bg-second);
+}
+
+#access-menu-close {
+    font-weight: bold;
+    width: fit-content;
+    position: absolute;
+    top: 0.5rem;
+    right: 3px;
+    z-index: 1;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-second);
+    border: solid 1px var(--color-bg-primary);
+    border-radius: 15%;
+}
+
+.access-button {
+    display: block;
+    background-color: transparent;
+    color: var(--color-bg-primary);
+    text-decoration: underline;
+    cursor: pointer;
+    border: 0;
+}
+
+#access-menu span {
+    display: block;
+    font-size: 75%;
+}
+
 
 /* page specific */
 
