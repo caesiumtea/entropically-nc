@@ -6,7 +6,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 
 ## to do
 - add comment widget
-- add guestbook
+- fix cursor effect causing page to stretch beyond edges
 - make cute layout graphics (wanna try out image borders!)
 - make 3-column desktop layout
 - write tutorial about how i made my accessibility menu (toggling fonts and scripts)
