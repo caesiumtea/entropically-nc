@@ -12,7 +12,9 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - write tutorial about how i made my accessibility menu (toggling fonts and scripts)
 - add light theme and button to toggle them
   - maybe also high contrast themes?
-- animate hamburger menu button
+- implement accessible CSS-only hamburger menu from [kalechips](https://kalechips.net/projects/snippets/burger)
+- add sr-only close button to bottom of accessibility menu, as seen in kalechips hamburger menu
+- animate accessibility menu sliding in and out
 
 ## license
 the Hippocratic License is an *almost* open license that says you can do basically anything you want with this code as long as it doesn't hurt people. check out [LICENSE.md](LICENSE.md) as well as the [Hippocratic License website](https://firstdonoharm.dev/).
