@@ -82,28 +82,28 @@ textarea:not([rows]) {
     font-family: "Iosevka";
     font-weight: normal;
     font-style: normal;
-    src: url("fonts/IosevkaAile-Regular.ttf") format("truetype");
+    src: url("/fonts/IosevkaAile-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Iosevka";
     font-weight: bold;
     font-style: normal;
-    src: url("fonts/IosevkaAile-Bold.ttf") format("truetype");
+    src: url("/fonts/IosevkaAile-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Iosevka";
     font-weight: normal;
     font-style: italic;
-    src: url("fonts/IosevkaAile-Italic.ttf") format("truetype");
+    src: url("/fonts/IosevkaAile-Italic.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Iosevka";
     font-weight: bold;
     font-style: italic;
-    src: url("fonts/IosevkaAile-BoldItalic.ttf") format("truetype");
+    src: url("/fonts/IosevkaAile-BoldItalic.ttf") format("truetype");
 }
 
 @font-face {
