@@ -6,10 +6,11 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 
 ## to do
 - 'links out' page
+- add license info to about page
 - add fun buttons to about page
 - splash page that asks people their preference for animation on/off
 - add comment widget - probably [giscus](https://giscus.app/)?
-- fix cursor effect causing page to stretch beyond edges
+- fix cursor effect causing page to stretch beyond edges x_x (this will be hard... advice encouraged lol)
 - make cute layout graphics (wanna try out image borders!)
 - make 3-column desktop layout
 - write tutorial about how i made my accessibility menu (toggling fonts and scripts)
