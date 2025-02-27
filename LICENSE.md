@@ -1,4 +1,8 @@
-**HIPPOCRATIC LICENSE**
+# LICENSE
+## SCOPE
+The Hippocratic License (below) applies only to the **code and design of the website** contained in this repo--i.e., any CSS and JavaScript files, and the structure/markup contained in the HTML files. Any **prose content** contained in those HTML files (such as the content of blog posts), and any **images** in this repo, are NOT covered by the Hippocratic License. I reserve all rights to my prose and images, unless otherwise stated.
+
+## HIPPOCRATIC LICENSE
 
 **Version 3.0, October 2021**
 
