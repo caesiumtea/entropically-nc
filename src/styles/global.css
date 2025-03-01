@@ -377,7 +377,12 @@ iframe {
     margin-top: 1rem;
 }
 
+
+
 /* page specific */
+
+
+
 
 /* home page */
 
@@ -412,9 +417,11 @@ iframe {
 }
 
 
+
+
 /* desktop styles */
 
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 600px) {
     main {
         min-width: 80ch;
     }
