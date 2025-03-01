@@ -239,6 +239,14 @@ iframe {
     height: 700px;
 }
 
+.buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
 .code {
     font-family: var(--font-code);
 }
@@ -257,9 +265,7 @@ iframe {
     overflow:hidden;
 }
 
-.dyslexic {
-    font-family: OpenDyslexic, Arial, Helvetica, sans-serif;
-}
+
 
 
 /* navigation */

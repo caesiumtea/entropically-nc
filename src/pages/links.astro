@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "links out";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <section>
+        <h2>friends</h2>
+        <p>
+            pls check out these very cool sites from some other folks i know in
+            the indie web world!
+        </p>
+        <details>
+            <summary>warning: contains fast animation</summary>
+            <div class="buttons">
+                <a href="https://gremghost.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="/img/sites-buttons/gremghost.png" alt="gremghost" /></a>
+                <a href="https://sugarstarluxe.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="/img/sites-buttons/sugarstarluxe.gif" alt="sugar starluxe" /></a>
+            </div>
+        </details>
+    </section>
+</BaseLayout>
