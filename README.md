@@ -18,10 +18,12 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - add light theme and button to toggle them
   - maybe also high contrast themes?
 - implement accessible CSS-only hamburger menu from [kalechips](https://kalechips.net/projects/snippets/burger)
-- add sr-only close button to bottom of accessibility menu, as seen in kalechips hamburger menu
+- add hidden close button to bottom of accessibility menu, as seen in kalechips hamburger menu
 - animate accessibility menu sliding in and out
-- virtual sticker book
+- virtual sticker book (inspired by pastelhello.com)
 - make submenus or otherwise improve nav/add more pages to nav
+- find a pixel font with tighter spacing tbh
+- move tags index onto blog page (as a component) and put tutorials page in main nav
 
 ## license
 the license for the **code** of this site is the Hippocratic License, an *almost* open license that says you can do basically anything you want with this code as long as it doesn't hurt people. check out [LICENSE.md](LICENSE.md) as well as the [Hippocratic License website](https://firstdonoharm.dev/). by the way, i really do want you to go ahead and take my code and tinker with it!
