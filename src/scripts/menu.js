@@ -1,7 +1,3 @@
-document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('expanded');
-});
-
 document.querySelector('#access-icon').addEventListener('click', () => {
     document.querySelector('#access-menu').removeAttribute('hidden');
     document.querySelector('#access-icon').setAttribute('hidden', '');

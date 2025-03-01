@@ -458,6 +458,10 @@ iframe {
     color: var(--color-bg-second);
 }
 
+#access-menu a {
+    color: inherit;
+}
+
 #access-menu-close {
     font-weight: bold;
     width: fit-content;
