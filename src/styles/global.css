@@ -134,6 +134,8 @@ textarea:not([rows]) {
     --font-main: Iosevka, Verdana, Geneva, Tahoma, sans-serif;
     --font-accent: Eczar, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --font-code: 'Courier New', Courier, monospace;
+    --burgericon:url(/img/burger.svg); /* Path to burger vector */
+    --closeicon:url(/img/close.svg); /* Path to close vector */
 }
 
 
@@ -260,42 +262,146 @@ iframe {
 }
 
 
-/* nav styles */
+/* navigation */
+
+/* shared - navbar and menu */
 
 .nav-links {
-    width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
-    margin: 0;
+    color: var(--color-text-second);
+    font-size: 180%;
+    font-weight: 600;
+    font-family: var(--font-accent);
+    list-style-type: none;
+}
+
+.nav-links > li {
+    padding: 0.5rem 2rem;
 }
 
 .nav-links a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
-.expanded {
-    display: unset;
+.nav-links ul {
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 80%;
 }
 
-.hamburger {
-    padding-right: 20px;
+/* navbar (desktop) */
+
+#navbar {
+    display: none;
+    background-color: var(--color-bg-second);
+    border-bottom: 2px solid var(--color-accent-2);
+}
+
+#navbar > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    width: 80%;
+    margin: auto;
+}
+
+#navbar > ul ul {
+    background-color: var(--color-bg-second);
+    border: 2px solid var(--color-accent-2);
+    position: fixed;
+    padding: 0.5rem 1.5rem;
+}
+
+/* burger menu (nav) */
+/* code and icons from https://kalechips.net/projects/snippets/burger */
+
+#burger {
+    position:fixed;
+    top: 5px;
+    z-index:1000;
+    background-color: transparent;
+}
+
+#burger[open] {
+	position:fixed;
+    background-color: var(--color-bg-second);
+    border: 2px solid var(--color-accent-2);
+    border-radius: 0.5rem;
+    
+}
+
+#nav-toggle {
+    list-style-type: none;
     cursor: pointer;
+    display:flex;
+    align-items:center;
 }
 
-.hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: var(--color-text-second);
+#nav-toggle::before {
+	height:40px;
+	width:40px;
+    background:var(--color-accent-1);
 }
+
+#nav-toggle::-webkit-details-marker {
+    display: none;
+}
+
+#nav-toggle::before {
+    content: '';
+	mask-image:url(/img/burger.svg);
+	-webkit-mask-image:url(/img/burger.svg);
+	mask-size:40px;
+	-webkit-mask-size:40px;
+}
+
+#burger[open] > summary::before {
+    content: '';
+	mask-image:url(/img/close.svg);
+	-webkit-mask-image:url(/img/close.svg);
+	mask-size:40px;
+	-webkit-mask-size:40px;
+}
+
+.skip a {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+ 
+.skip a:focus {
+    position:static;
+    width:auto;
+    height:auto;
+}
+
+#nav-menu {
+    z-index:1000;
+    /* position:relative; */
+    padding: 1rem;
+}
+
+#nav-menu ul {
+    list-style:none;
+    text-align:center;
+}
+
+#nav-menu li {
+    margin-left: -40px; /* idfk why i have to do this to remove whitespace */
+}
+
+#nav-menu details {
+    text-align: center;
+}
+
+#nav-skip {
+    font-size: 80%;
+}
+
+
 
 /* accessibility menu */
 #access-icon {
@@ -425,22 +531,17 @@ iframe {
     main {
         min-width: 80ch;
     }
-    .nav-links {
-        margin-left: 5em;
+
+    #navbar {
         display: block;
-        position: static;
-        width: auto;
-        background: none;
     }
 
-    .nav-links a {
-        display: inline-block;
-        padding: 15px 20px;
-    }
-
-    .hamburger {
+    #burger {
         display: none;
     }
 
+    #nav-skip {
+        display: none;
+    }
 
 }
