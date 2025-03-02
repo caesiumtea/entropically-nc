@@ -255,6 +255,13 @@ iframe {
     font-size: 75%;
 }
 
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 /* source: https://webaim.org/techniques/css/invisiblecontent/ */
 .sr-only {
     position:absolute;
