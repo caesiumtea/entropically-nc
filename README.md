@@ -24,6 +24,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - find a pixel font with tighter spacing tbh
 - make tags index into a component instead of duplicating code on blog and tags pages
 - put tutorial tags index on tutorials page, once you have some posts for it
+- figure out image compression
 
 ## license
 the license for the **code** of this site is the Hippocratic License, an *almost* open license that says you can do basically anything you want with this code as long as it doesn't hurt people. check out [LICENSE.md](LICENSE.md) as well as the [Hippocratic License website](https://firstdonoharm.dev/). by the way, i really do want you to go ahead and take my code and tinker with it!

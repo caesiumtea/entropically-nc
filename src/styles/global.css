@@ -185,6 +185,11 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
+h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+
 a {
     color: var(--color-text-second);
 }
@@ -239,6 +244,14 @@ iframe {
     height: 700px;
 }
 
+blockquote {
+    background-color: var(--color-bg-second);
+    border-left: 5px solid var(--color-text-second);
+    padding: 1rem;
+    padding-left: 2rem;
+    margin-left: 2rem;
+}
+
 .buttons {
     display: flex;
     flex-flow: row wrap;
@@ -260,6 +273,10 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+.margin-top-1rem {
+    margin-top: 1rem;
 }
 
 /* source: https://webaim.org/techniques/css/invisiblecontent/ */
