@@ -5,7 +5,6 @@ this is the code for my blog on [neocities](https://entropically.neocities.org/)
 made with [Astro](https://astro.build/)! it's my first time using astro, please give me advice lol
 
 ## to do
-- add license info to about site page
 - add fun buttons to about me page
 - splash page that asks people their preference for animation on/off
 - add freezeframe.js or similar
@@ -25,6 +24,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - make tags index into a component instead of duplicating code on blog and tags pages
 - put tutorial tags index on tutorials page, once you have some posts for it
 - figure out image compression
+- add changelog
 
 ## license
 the license for the **code** of this site is the Hippocratic License, an *almost* open license that says you can do basically anything you want with this code as long as it doesn't hurt people. check out [LICENSE.md](LICENSE.md) as well as the [Hippocratic License website](https://firstdonoharm.dev/). by the way, i really do want you to go ahead and take my code and tinker with it!

@@ -203,7 +203,7 @@ p {
     margin: 1rem 0;
 }
 
-em {
+em, strong {
     color: var(--color-accent-1);
 }
 
@@ -246,7 +246,7 @@ iframe {
 
 blockquote {
     background-color: var(--color-bg-second);
-    border-left: 5px solid var(--color-text-second);
+    border-left: 5px solid var(--color-accent-2);
     padding: 1rem;
     padding-left: 2rem;
     margin-left: 2rem;
