@@ -5,9 +5,10 @@ this is the code for my blog on [neocities](https://entropically.neocities.org/)
 made with [Astro](https://astro.build/)! it's my first time using astro, please give me advice lol
 
 ## to do
-- add license info to about page
-- add fun buttons to about page
+- add license info to about site page
+- add fun buttons to about me page
 - splash page that asks people their preference for animation on/off
+- add freezeframe.js or similar
 - add comment widget - probably [giscus](https://giscus.app/)?
 - fix cursor effect causing page to stretch beyond edges x_x (this will be hard... advice encouraged lol)
 - make cute layout graphics (wanna try out image borders!)
