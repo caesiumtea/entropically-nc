@@ -36,33 +36,38 @@ const { pageTitle } = Astro.props;
         <script>
             import "../scripts/menu.js";
             import "../scripts/font.js";
-            import "../scripts/burger.js";
         </script>
         <script type="text/javascript" is:inline id="cursor-script">
             // Cursor sparkles effect by RV: http://www.mf2fm.com/rv/dhtmltinkerbell.php
 
             // Note: script only works when inline, for some reason
 
-            // this function modified from example in Astro docs: 
+            // this function modified from example in Astro docs:
             // https://docs.astro.build/en/tutorial/6-islands/2/#add-client-side-interactivity
             let animateCursor = (() => {
-                const localStorageCursor = localStorage?.getItem("animate-cursor") ?? "true";
+                const localStorageCursor =
+                    localStorage?.getItem("animate-cursor") ?? "true";
                 if (localStorageCursor === "true") {
                     return true;
                 } else if (localStorageCursor === "false") {
                     return false;
                 }
-                if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                if (
+                    window.matchMedia("(prefers-reduced-motion: reduce)")
+                        .matches
+                ) {
                     return false;
                 }
                 return true;
             })();
 
             if (animateCursor) {
-                document.querySelector('#access-cursor').textContent = "disable cursor animation";
+                document.querySelector("#access-cursor").textContent =
+                    "disable cursor animation";
             } else {
                 console.log("animate cursor false");
-                document.querySelector('#access-cursor').textContent = "enable cursor animation";
+                document.querySelector("#access-cursor").textContent =
+                    "enable cursor animation";
             }
 
             // <![CDATA[
@@ -90,6 +95,20 @@ const { pageTitle } = Astro.props;
             var tinyv = new Array();
 
             window.onload = function () {
+                // NOT CURSOR SCRIPT
+                // function to close hamburger menu by pressing esc
+                // from kalechips.net
+                let burger = document.getElementById("burger");
+
+                burger.addEventListener("keydown", (event) => {
+                    let key = event.code;
+                    if (key == "Escape") {
+                        burger.removeAttribute("open");
+                    }
+                });
+                // END HAMBURGER SCRIPT
+                // RESUME CURSOR SCRIPT
+
                 if (document.getElementById && animateCursor) {
                     var i, rats, rlef, rdow;
                     for (var i = 0; i < sparkles; i++) {
