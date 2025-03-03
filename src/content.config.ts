@@ -8,10 +8,12 @@ const blog = defineCollection({
     schema: z.object({
         title: z.string(),
         pubDate: z.date(),
+        editDate: z.date(),
         description: z.string(),
         image: z.object({
             url: z.string(),
-            alt: z.string()
+            alt: z.string(),
+            caption: z.string()
         }),
         tags: z.array(z.string())
     })
@@ -21,6 +23,7 @@ const tuts = defineCollection({
     schema: z.object({
         title: z.string(),
         pubDate: z.date(),
+        editDate: z.date(),
         description: z.string(),
         image: z.object({
             url: z.string(),

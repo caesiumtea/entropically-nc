@@ -11,5 +11,8 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
     "astro": "^5.3.0"
+  },
+  "devDependencies": {
+    "luxon": "^3.5.0"
   }
 }

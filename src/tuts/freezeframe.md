@@ -1,6 +1,7 @@
 ---
 title: 'tips and tricks for pausing your gifs with freezeframe.js'
 pubDate: 2025-03-03
+editDate: 2025-03-03
 description: 'want to make your site more accessible to users with motion sensitivity, but struggling to get freezeframe.js working? here are some tips that might help!'
 image:
      url: '/img/blinkies.png'
