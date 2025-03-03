@@ -671,6 +671,23 @@ main.splash {
     text-indent: 4ch;
 }
 
+.license-box {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.license-box img {
+    width: 88px;
+    height: auto;
+}
+
+.license-box p {
+    text-indent: 0;
+    margin: 0;
+}
+
 
 
 
