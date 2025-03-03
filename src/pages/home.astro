@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Changelog from "../components/Changelog.astro";
+
+const pageTitle = "vae's blog n stuff";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <section>
+        <p>
+            welcome! this site is still under construction, but why not go check
+            out the <a href="/blog">blog</a> for now?
+        </p>
+        <p>there's also a <a href="/guestbook">guestbook</a> now!</p>
+        <p>things i hope to add:</p>
+        <ul>
+            <li>
+                tutorials to help with your own neocities, like how i made my accessibility menu and font switcher
+            </li>
+            <li>pages for my OCs maybe???</li>
+            <li>lists of my favorite things lol</li>
+            <li>shrines?? tales of symphonia, CLAMP...</li>
+            <li>comments widget!</li>
+            <li>actual cute layout with graphics...,,,</li>
+        </ul>
+        <p>(psst... check the <a href="https://github.com/caesiumtea/entropically-nc/blob/main/README.md" rel="noopener noreferrer">github README file</a> for more about changes i plan to make to the site!)</p>
+    </section>
+    <section>
+        <h2>webrings</h2>
+        <div class="webrings">
+            <script defer src="https://mechagic.party/1stylescripts/gitgudring.js"></script>
+        </div>
+    </section>
+    <section>
+        <h2 id="join-us">join us!</h2>
+        <p>this site is striving to be part of the <a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" rel="noopener noreferrer">web revival</a>! it's all about rejecting the hold that corporate media has over the internet right now, making the web personal and <em>fun</em> again. it's about the idea that the web belongs to <em>all of us</em>. why don't you join us and make a website of your own? not a website for your business or your portfolio--just for fun, just to have your own little place in the world that you can do anything you want with.</p>
+        <p><a href="https://neocities.org" rel="noopener noreferrer">neocities.org</a> is a great place to get started! you can make a website completely for free there (with no ads or anything), and there's a great sense of community among neocities users too!</p>
+        <p>if you're on board, then i'd love to see or hear about your site, <em>especially</em> if it's your first one--feel free to drop a link in my <a href="/guestbook">guestbook</a> or otherwise <a href="/aboutme#contact">get in touch</a>! i'm always happy to help out folks who are new to making websites, too!</p>
+        <p>want to experience more of the web revival/indie web/small web? try <a href="https://32bit.cafe/" rel="noopener noreferrer">32-bit cafe</a> and <a href="https://melonland.net" rel="noopener noreferrer">melonland</a>!</p>
+    </section>
+    <section>
+        <h2>link back</h2>
+        <div id="linkback-button">
+            <div>
+                <p>
+                    feel free to use this button to link to me! (hotlinking ok if you're on
+                    neocities, may break on non-neocities sites)
+                </p>
+                <img
+                    src="img/entropically-button.png"
+                    alt="88x31 button with a sunset-colored gradient and a few sketchy purple stars, and then the word 'entropically' written in a white pixel font."
+                />
+            </div>
+            <textarea aria-label="button code" class="code" autocomplete="off" 
+            readonly
+                >&lt;a href="https://entropically.neocities.org/" target="_blank" rel="noopener noreferrer"&gt;&lt;img src="https://entropically.neocities.org/img/entropically-button.png" alt="88x31 button with a sunset-colored gradient and a few sketchy purple stars, and then the word 'entropically' written in a white pixel font."&gt;&lt;/a&gt;</textarea>
+        </div>
+    </section>
+    <section id="changelog">
+        <h2>changelog</h2>
+        <Changelog />
+    </section>
+</BaseLayout>
+<style>
+    @media screen and (min-width: 636px) {
+        #linkback-button {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+</style>
