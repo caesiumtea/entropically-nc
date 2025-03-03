@@ -1,4 +1,4 @@
-- 2025-03-02: added this changelog!
+- 2025-03-02: added this changelog! trialing a [splash page](/splash)
 - 2025-03-01: split "about" into [about me](/aboutme) and [about site](/site), added jasper's bio to about me, added license info to about site, moved credits to about site
 - 2025-02-28: revamped nav to make hamburger menu more accessible and add more pages
 - 2025-02-26: filled out about page, added cursor sparklies, added accessibility menu and font options

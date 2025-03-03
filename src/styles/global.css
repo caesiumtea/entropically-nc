@@ -268,6 +268,15 @@ blockquote {
     font-size: 75%;
 }
 
+.large-accent-text {
+    font-size: 250%;
+    font-family: var(--font-accent);
+}
+
+.accent-color-1 {
+    color: var(--color-accent-1);
+}
+
 .centered {
     display: block;
     margin-left: auto;
@@ -275,8 +284,19 @@ blockquote {
     text-align: center;
 }
 
+.box {
+    background-color: var(--color-bg-second);
+    border: 2px solid var(--color-accent-3);
+    padding: 1rem;
+    margin: 1rem;
+}
+
 .margin-top-1rem {
     margin-top: 1rem;
+}
+
+.margin-top-2rem {
+    margin-top: 2rem;
 }
 
 /* source: https://webaim.org/techniques/css/invisiblecontent/ */
@@ -522,6 +542,21 @@ blockquote {
 /* page specific */
 
 
+/* splash page */
+body.splash {
+    background-image: url("/img/SpaceBackground17.png");
+}
+
+main.splash {
+    border: 0;
+}
+
+#splash-title {
+    font-size: min(450%, 14vi);
+    text-align: center;
+    margin-top: 3rem;
+}
+
 
 
 /* home page */
@@ -544,9 +579,10 @@ blockquote {
 #changelog-box {
     height: 10ch;
     overflow: auto;
-    background-color: var(--color-bg-second);
-    border: 2px solid var(--color-accent-3);
-    padding: 0.5rem;
+}
+
+#changelog-box ul {
+    padding-left: 1rem;
 }
 
 /* tags */
