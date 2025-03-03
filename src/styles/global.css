@@ -607,6 +607,23 @@ main.splash {
     font-size: 1.15em;
 }
 
+/* post's */
+
+.post-hero {
+    background-color: var(--color-bg-second);
+    padding: 1rem;
+}
+
+.post-hero img {
+    margin: 0.5rem auto;
+}
+
+.post-hero figcaption {
+    font-size: 85%;
+    color: var(--color-accent-1);
+}
+
+
 
 
 

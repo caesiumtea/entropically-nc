@@ -17,14 +17,15 @@ const blog = defineCollection({
     })
 });
 const tuts = defineCollection({
-    loader: glob({ pattern: '**/[^_]*.md', base: "./src/tuts-md" }),
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/tuts" }),
     schema: z.object({
         title: z.string(),
         pubDate: z.date(),
         description: z.string(),
         image: z.object({
             url: z.string(),
-            alt: z.string()
+            alt: z.string(),
+            caption: z.string()
         }),
         tags: z.array(z.string())
     })

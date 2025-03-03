@@ -1,12 +1,31 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
+
+let edited;
+if (frontmatter.editDate) {
+    edited = true;
+} else {
+    edited = false;
+}
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <p class="published">published {frontmatter.pubDate.toLocaleDateString()}</p>
+    <p class="published">
+        published {frontmatter.pubDate.toLocaleDateString()}
+    </p>
+    {
+        edited && (
+            <p class="published">
+                updated {frontmatter.editDate.toLocaleDateString()}
+            </p>
+        )
+    }
 
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <figure class="post-hero">
+        <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+        <figcaption set:html={frontmatter.image.caption}></figcaption>
+    </figure>
 
     <slot />
 

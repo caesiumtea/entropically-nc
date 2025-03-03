@@ -5,6 +5,7 @@ description: 'reasons why you should use an external editor like vs code to edit
 image:
      url: '.'
      alt: ''
+     caption: ''
 tags: ["vscode", "tools"]
 ---
 okay, first of all--there's nothing _wrong_ with the neocities editor. it does its job. if it's what you're comfortable with, cool, stick with it! but here are some reasons you might find it beneficial to use an external editor like vscode instead.
