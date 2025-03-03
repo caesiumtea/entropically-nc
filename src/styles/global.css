@@ -299,6 +299,10 @@ blockquote {
     margin-top: 2rem;
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* source: https://webaim.org/techniques/css/invisiblecontent/ */
 .sr-only {
     position:absolute;
@@ -485,7 +489,7 @@ blockquote {
     background-color: var(--color-accent-1);
     color: var(--color-bg-second);
     width: fit-content;
-    padding: 0 2rem 1rem;
+    padding: 1rem 2rem;
     position: fixed;
     right: 0;
     top: 5px;
@@ -498,7 +502,7 @@ blockquote {
     
 }
 
-#access-menu h1 {
+#access-menu h2 {
     font-size: 1rem;
     font-family: var(--font-main);
     font-weight: bold;
@@ -529,7 +533,7 @@ blockquote {
     text-decoration: underline;
     cursor: pointer;
     border: 0;
-    margin-top: 1rem;
+    margin: 1rem auto 0;
 }
 
 #access-menu span, #access-menu label {

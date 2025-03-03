@@ -7,19 +7,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let e;
 
     if (freeze === "off") {
-        startBtn.setAttribute('hidden', '');
-        stopBtn.removeAttribute('hidden');
+        startBtn.classList.add('hidden')
+        stopBtn.classList.remove('hidden');
     } else {
         e = new Freezeframe({ trigger: false, responsive: false });
-        stopBtn.setAttribute('hidden', '');
-        startBtn.removeAttribute('hidden');
+        stopBtn.classList.add('hidden');
+        startBtn.classList.remove('hidden');
     }
 
     startBtn.addEventListener("click", function () {
         e.start();
         window.localStorage.setItem('freezeframe', 'off');
-        startBtn.setAttribute('hidden', '');
-        stopBtn.removeAttribute('hidden');
+        startBtn.classList.toggle('hidden');
+        stopBtn.classList.toggle('hidden');
     });
 
     stopBtn.addEventListener("click", function () {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             e = new Freezeframe({ trigger: false, responsive: false });
         }
         window.localStorage.setItem('freezeframe', 'on');
-        stopBtn.setAttribute('hidden', '');
-        startBtn.removeAttribute('hidden');
+        stopBtn.classList.toggle('hidden');
+        startBtn.classList.toggle('hidden');
     });
 });
