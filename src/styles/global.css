@@ -309,6 +309,9 @@ blockquote {
     overflow:hidden;
 }
 
+.ff-image {
+    vertical-align: unset !important;
+}
 
 
 
