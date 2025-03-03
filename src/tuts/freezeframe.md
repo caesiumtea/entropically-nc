@@ -137,7 +137,9 @@ Since I just went over fixes for some of the problems you might encounter, I fig
 
 With any luck, you now have your functional gif pausing, with only minimal disruptions to your layout. Nice! But what if we could make this even better? There's probably a lot of folks who either always want animation on or never want animation on, so what if the visitor didn't have to click a separate start/stop button on each page--what if your website just remembered which setting they wanted and carried it over from one page to the next? Plus, we've already seen how much disruption freezeframe.js can cause--both in terms of ruining your CSS, and in terms of slowing down your page loading--so, if the user already said that they're cool with animations playing anyway, how about we just don't activate freezeframe for them at all?
 
-All that is possible when you tap into the browser's localStorage function, and I managed to get it all working that way on my site! 
+All that is possible when you tap into the browser's localStorage function, and I managed to get it all working that way on my site! (Open the accessibility menu in the top right corner to try it!) And I'm super excited to teach folks all about how you can do it too!
+
+...however, I have now been writing for quite a few hours and this will take a lot more explaining, so I am going to call it quits for now and save this for either a follow-up post or just something to come back and edit into this post on another day. Sorry for the cliffhanger! In the meantime, can always check this site's [github repo](https://github.com/caesiumtea/entropically-nc/blob/main/src/scripts/freezeframe.js) to investigate on your own and see if you can figure out how I did it!
 
 ## closing thoughts
 
