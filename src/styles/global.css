@@ -541,6 +541,14 @@ blockquote {
     width: 36ch;
 }
 
+#changelog-box {
+    height: 10ch;
+    overflow: auto;
+    background-color: var(--color-bg-second);
+    border: 2px solid var(--color-accent-3);
+    padding: 0.5rem;
+}
+
 /* tags */
 
 .tags {

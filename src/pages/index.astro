@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Changelog from "../components/Changelog.astro";
+
 const pageTitle = "vae's blog n stuff";
 ---
 
@@ -52,6 +54,10 @@ const pageTitle = "vae's blog n stuff";
             readonly
                 >&lt;a href="https://entropically.neocities.org/" target="_blank" rel="noopener noreferrer"&gt;&lt;img src="https://entropically.neocities.org/img/entropically-button.png" alt="88x31 button with a sunset-colored gradient and a few sketchy purple stars, and then the word 'entropically' written in a white pixel font."&gt;&lt;/a&gt;</textarea>
         </div>
+    </section>
+    <section id="changelog">
+        <h2>changelog</h2>
+        <Changelog />
     </section>
 </BaseLayout>
 <style>
