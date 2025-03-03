@@ -24,10 +24,12 @@ if (frontmatter.editDate) {
 
     <figure class="post-hero">
         <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-        <figcaption set:html={frontmatter.image.caption}></figcaption>
+        <figcaption set:html={frontmatter.image.caption} />
     </figure>
 
-    <slot />
+    <div class="post">
+        <slot />
+    </div>
 
     <div class="tags">
         {

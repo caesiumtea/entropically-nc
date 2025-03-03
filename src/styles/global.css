@@ -19,7 +19,7 @@ html {
 /* Set core body defaults */
 body {
     min-height: 100vh;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -213,6 +213,7 @@ h1 {
 h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    margin-top: 2rem;
 }
 
 h3 {
@@ -230,7 +231,7 @@ a:focus {
 }
 
 p {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 em, strong {
@@ -256,7 +257,17 @@ code {
     background-color: var(--color-bg-third);
     color: var(--color-text-second);
     padding: 0.1em 0.2em;
-    border-radius: 0.2em;
+    border-radius: 0.3em;
+}
+
+pre {
+    margin: 1.5rem;
+    padding: 1rem;
+    border: 2px solid var(--color-accent-3);
+}
+
+.astro-code code {
+    background-color: transparent;
 }
 
 select {
@@ -644,6 +655,7 @@ main.splash {
 .post-hero {
     background-color: var(--color-bg-second);
     padding: 1rem;
+    margin-bottom: 2.5rem;
 }
 
 .post-hero img {
@@ -655,6 +667,9 @@ main.splash {
     color: var(--color-accent-1);
 }
 
+.post p {
+    text-indent: 4ch;
+}
 
 
 
