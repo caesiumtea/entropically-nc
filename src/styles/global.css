@@ -546,7 +546,8 @@ blockquote {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     text-align: center;
-    
+    max-height: calc(100vh - 10px);
+    overflow: auto;
 }
 
 #access-menu h2 {
@@ -557,7 +558,7 @@ blockquote {
 }
 
 #access-menu a {
-    color: inherit;
+    color: var(--color-bg-primary);
 }
 
 #access-menu-close {
