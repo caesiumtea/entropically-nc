@@ -155,10 +155,12 @@ textarea:not([rows]) {
     --color-bg-primary: #331D41; /* dark purple */
     --color-bg-second: #003f5c; /* dark blue */
     --color-bg-third: #00202e; /* darkest blue */
+    --color-bg-fourth: #002D42; /* mediumly dark blue */
     --color-text-primary: #ffb9a3; /* light coral */
     --color-text-second: #ff6361; /* coral */
+    --color-text-third: #D68FBA; /* light mauve */
     --color-accent-1: #ffa600; /* gold */
-    --color-accent-2: #bc5090; /* light mauve */
+    --color-accent-2: #bc5090; /* pink mauve */
     --color-accent-3: #8a508f; /* dark mauve */
     --color-accent-4: #58508d; /* purple */
     --font-main: Iosevka, Verdana, Geneva, Tahoma, sans-serif;
@@ -189,7 +191,7 @@ main {
     flex: 1;
     margin: 0 auto;
     padding: 1.5rem;
-    max-width: 80ch;
+    max-width: min(80ch, 100vw);
     border-left: 5px solid var(--color-bg-second);
     border-right: 5px solid var(--color-bg-second);
 }
@@ -288,8 +290,8 @@ iframe {
 }
 
 blockquote {
-    background-color: var(--color-bg-second);
-    border-left: 5px solid var(--color-accent-2);
+    background-color: var(--color-bg-fourth);
+    border-left: 5px solid var(--color-accent-3);
     padding: 1rem;
     padding-left: 2rem;
     margin-left: 2rem;
@@ -328,7 +330,7 @@ blockquote {
 }
 
 .box {
-    background-color: var(--color-bg-second);
+    background-color: var(--color-bg-fourth);
     border: 2px solid var(--color-accent-3);
     padding: 1rem;
     margin: 1rem;
@@ -482,6 +484,8 @@ blockquote {
     z-index:1000;
     /* position:relative; */
     padding: 1rem;
+    max-height: calc(100vh - 2.5rem);
+    overflow: auto;
 }
 
 #nav-menu ul {
@@ -656,6 +660,7 @@ main.splash {
     background-color: var(--color-bg-second);
     padding: 1rem;
     margin-bottom: 2.5rem;
+    max-width: calc(100vw - 2rem);
 }
 
 .post-hero img {
@@ -695,7 +700,7 @@ main.splash {
 
 @media screen and (min-width: 600px) {
     main {
-        min-width: 80ch;
+        width: 80ch;
     }
 
     #navbar {

@@ -54,23 +54,35 @@ const pageTitle = "about the site";
         </p>
     </section>
     <section>
-        <h2>license</h2>
+        <h2 id="about-license">license</h2>
         <p>
             the license for the <strong>code</strong> of this site is the Hippocratic
             License, an <em>almost</em> open license that says you can do basically
             anything you want with this code as long as it doesn't hurt people.
             check out the <a href="https://github.com/caesiumtea/entropically-nc/blob/main/LICENSE.md">LICENSE.md on github</a> as well as the <a
                 href="https://firstdonoharm.dev/">Hippocratic License website</a
-            >. by the way, i really do want you to go ahead and take my code and
-            tinker with it!
+            >. in practical terms, that means that you may not use my code on sites containing hate speech or promoting fascism or other harmful content - but as long as you're not doing that, please feel free to copy my code as much as you want! i genuinely do want you to go tinker around with my code 🛠✨
         </p>
         <p>
             however, any <strong>prose (including blog posts) and visual art</strong> on this
-            site are <em>proprietary</em>, meaning you do <em>not</em> have
+            site are <em>proprietary</em> (unless otherwise stated), meaning you do <em>not</em> have
             permission to use them without asking. though, if you do want to use
             my art/writing for anything, please do feel free to actually reach out
             and ask--i will probably say yes!
         </p>
+    </section>
+    <section>
+        <h2>accessibility</h2>
+        <p>i'm doing the best i can to make this site accessible to as many people as possible (especially to folks with disabilities), but my knowledge has its limits! if any part of my site feels inaccessible to you, please do <a href="/aboutme#contact">contact me</a> and let me know how i can do better 💜</p>
+        <p>accessibility methods in place (if any of these don't work, let me know ASAP!):</p>
+        <ul>
+            <li>you can find an accessibility menu in the top right corner -- it's the icon of a person in a circle, also should be the first tab index when navigating by keyboard. this menu provides options to disable/enable animations and cursor effects, to change the font, and later will also have a toggle for light and dark modes. i will be writing a tutorial soon for how to add this to your own site!</li>
+            <li><a href="https://www.npmjs.com/package/freezeframe" rel="noopener noreferrer">freezeframe.js</a> is in use to pause animated gifs - <a href="/learn/freezeframe">tutorial here</a>! however, please note that in order to reduce lag, <strong>freezeframe has <em>not</em> been applied to gifs with slow or subtle animation</strong>. to the best of my knowledge, subtle animations should not pose a risk to anyone, but if it does still give you a bad experience here then absolutely do reach out and let me know so that i can change it.</li>
+            <li>i'm in the process of making sure my site is still functional without javascript - currently the accessibility menu does require javascript to activate, so that's a high priority to fix</li>
+            <li>i try to use alt attributes and aria labels, but i have not yet tested my site with a screen reader</li>
+            <li>should be navigable by keyboard, but i know i need to add "skip to main" and <a href="#">"return to top"</a> links</li>
+            <li>i check my color contract with <a href="https://webaim.org/resources/contrastchecker/">webaim</a> - but if my color choices are still not legible enough to <em>you</em> then let me know!</li>
+        </ul>
     </section>
     <section>
         <h2 id="credits">credits</h2>
