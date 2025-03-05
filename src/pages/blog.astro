@@ -18,6 +18,7 @@ const tags = [...new Set(allPosts.map((post: any) => post.data.tags).flat())];
                     <BlogPost
                         url={`/blog/${post.id}/`}
                         title={post.data.title}
+                        description={post.data.description}
                     />
                 ))
             }

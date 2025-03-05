@@ -240,6 +240,10 @@ p {
     margin: 1.5rem 0;
 }
 
+li p {
+    margin: 0;
+}
+
 em, strong {
     color: var(--color-accent-1);
 }

@@ -5,6 +5,10 @@ import BlogPost from "../components/BlogPost.astro";
 
 const pageTitle = "website tips and tutorials";
 const allPosts = await getCollection("tuts");
+
+const tags = [
+    ...new Set(allPosts.map((post: any) => post.data.tags).flat()),
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -12,15 +16,26 @@ const allPosts = await getCollection("tuts");
         some advice and tutorials for web dev, particularly for making neocities
         pages and/or for folks who are new to web dev!
     </p>
-    <p>.....coming soon....</p>
+    <h2>tutorial archive</h2>
     <ul>
         {
             allPosts.map((post: any) => (
                 <BlogPost
                     url={`/learn/${post.id}/`}
                     title={post.data.title}
+                    description={post.data.description}
                 />
             ))
         }
     </ul>
+    <h2>tags index</h2>
+    <div class="tags">
+        {
+            tags.map((tag) => (
+                <p class="tag">
+                    <a href={`/tut-tags/${tag}`}>{tag}</a>
+                </p>
+            ))
+        }
+    </div>
 </BaseLayout>
