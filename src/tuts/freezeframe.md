@@ -170,6 +170,8 @@ Toward the middle of the JS code block, you can see the `new Freezeframe()` init
 
 For what it's worth, I personally feel that if your purpose in freezing gifs is to improve accessibility for those with visual sensitivities, then the safer bet is to have them stopped by default. The [WCAG accessibility standards](https://www.w3.org/TR/WCAG21/#pause-stop-hide) consider auto-playing animations acceptable as long as they can be stopped within 3 seconds--but consider, how obvious is your stop button, to be confident that a user will locate it within 3 seconds (no matter their screen size)?
 
+One more good idea if you're going to have gifs play by default would be to check whether the user has set [prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) in their browser, and in that case, swap to disabling them by default. I'd like to come back to this later and add it to the script for you, but for now, I encourage you to do a little of your own research and see if you can figure out how to add a check for that!
+
 
 ### an aside about package versions
 
