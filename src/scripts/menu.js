@@ -27,18 +27,15 @@ document.querySelector('#select-font').addEventListener('change', () => {
         document.documentElement.style.setProperty('--font-main', 'OpenDyslexic, Arial, Helvetica, sans-serif ');
         document.documentElement.style.setProperty('--font-accent', 'OpenDyslexic, Arial, Helvetica, sans-serif');
         document.documentElement.style.setProperty('--font-code', '"Courier New", Courier, monospace;');
-        document.documentElement.style.fontSize = "100%";
     } else if (font === "pixel") {
         window.localStorage.setItem('font', 'pixel');
         document.documentElement.style.setProperty('--font-main', 'Monogram, Iosevka, Verdana, Geneva, Tahoma, sans-serif');
         document.documentElement.style.setProperty('--font-accent', 'Monogram, Eczar, Cambria, Cochin, Georgia, Times, "Times New Roman", serif');
         document.documentElement.style.setProperty('--font-code', 'Monogram, Eczar, Cambria, Cochin, Georgia, Times, "Times New Roman", serif');
-        document.documentElement.style.fontSize = "160%";
     } else {
         window.localStorage.setItem('font', 'default');
         document.documentElement.style.setProperty('--font-main', 'Iosevka, Verdana, Geneva, Tahoma, sans-serif');
         document.documentElement.style.setProperty('--font-accent', 'Eczar, Cambria, Cochin, Georgia, Times, "Times New Roman", serif');
         document.documentElement.style.setProperty('--font-code', '"Courier New", Courier, monospace;');
-        document.documentElement.style.fontSize = "100%";
     }
 });
