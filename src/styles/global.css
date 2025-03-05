@@ -611,6 +611,7 @@ body.splash {
 
 main.splash {
     border: 0;
+    background-color: transparent;
 }
 
 #splash-title {
