@@ -224,6 +224,7 @@ h2 {
 h3 {
     font-size: 1.7rem;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 a {
@@ -315,6 +316,8 @@ li img {
 .code {
     font-family: var(--font-code);
 }
+
+/* utility classes */
 
 .small-text {
     font-size: 75%;
@@ -685,6 +688,20 @@ main.splash {
     text-indent: 4ch;
 }
 
+.toc {
+    margin-bottom: 2rem;
+    width: fit-content;
+    margin-left: 0;
+}
+
+.toc h2 {
+    margin-top: 0;
+}
+
+.toc ul {
+    padding-left: 1rem;
+}
+
 .license-box {
     display: flex;
     flex-direction: row;
@@ -725,3 +742,13 @@ main.splash {
     }
 
 }
+
+/* @media screen and (min-width: 1200px) {
+    .toc {
+        position: fixed;
+        right: 0px;
+        top: 80px;
+        width: calc((100vw - 85ch) / 2);
+        font-size: 85%;
+    }
+} */

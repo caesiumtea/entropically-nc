@@ -24,7 +24,8 @@ function buildToc(headings: MarkdownHeading[]) {
 }
 ---
 
-<nav class="toc">
+<nav class="toc box" aria-label="article table of contents">
+  <h2>table of contents</h2>
   <ul>
     {toc.map((heading) => <ToCHeading heading={heading} />)}
   </ul>

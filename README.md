@@ -9,7 +9,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - add comment widget - probably [giscus](https://giscus.app/)?
 - fix cursor effect causing page to stretch beyond edges x_x (this will be hard... advice encouraged lol)
 - make cute layout graphics (wanna try out image borders!)
-- make 3-column desktop layout
+- make 3-column desktop layout -- requires restructuring base layout template ugghhhh
 - write tutorial about how i made my accessibility menu (toggling fonts and scripts)
 - write my general advice/recs for anyone making their first website
 - add light theme and button to toggle theme
@@ -18,10 +18,11 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - animate accessibility menu sliding in and out???
 - virtual sticker book (inspired by pastelhello.com)
 - make submenus or otherwise improve nav/add more pages to nav
+  - breadcrumbs
 - find a pixel font with tighter spacing tbh
 - make tags index into a component instead of duplicating code on blog and tags pages
 - put tutorial tags index on tutorials page, once you have some posts for it
-- figure out image compression
+- figure out image optimization (try built in astro component or cloudinary)
 - custom scrollbars for e.g. changelog
 
 ## license
