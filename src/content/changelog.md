@@ -1,3 +1,4 @@
+- 2025-03-04: small styling updates; background image on page margins
 - 2025-03-03: added the first "learn" post, about [how to pause gifs](/learn/freezeframe) and how to troubleshoot freezeframe.js! 
 - 2025-03-02: added a splash page and this changelog, and set up freezeframe.js for gif pausing
 - 2025-03-01: split "about" into [about me](/aboutme) and [about site](/site), added jasper's bio to about me, added license info to about site, moved credits to about site
