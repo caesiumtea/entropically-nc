@@ -1,7 +1,7 @@
 ---
 title: 'tips and tricks for pausing your gifs with freezeframe.js'
 pubDate: 2025-03-03
-editDate: 2025-03-03
+editDate: 2025-03-05
 description: 'want to make your site more accessible to users with motion sensitivity, but struggling to get freezeframe.js working? here are some tips that might help!'
 image:
      url: '/img/blinkies.png'
@@ -9,6 +9,8 @@ image:
      caption: 'what would we do without blinkies.... (featuring a random assortment from <a href="https://blinkies.cafe/">blinkies.cafe</a>--and no, this image is not supposed to be blinking right now.)'
 tags: ["web craft", "accessibility"]
 ---
+
+<aside class="box">Mar 5 2025 update: added an alternate freezeframe script from <a href="https://sen.fish/">sen.fish</a> and a hypothesis about how to override freezeframe's styling.</aside>
 
 The old web was a magical place, but it was also a pretty overwhelming place. Don't get me wrong, I really do love the maximalism of all the flashing blinkies and silly animations all over the place... But for some folks, all that visual noise can be disorienting, nauseating, or even outright dangerous. To me, a really crucial part of the [web revival](https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival) is to merge the spirit of the old web with the new knowledge and technological advancements that we've gained in the past 20 years, in order to make a web that truly belongs to *everyone*. And making it belong to everyone means making it accessible to as many people as possible. But does accessibility mean that we need to give up all of those bright shiny gifs that we love so much?
 
@@ -112,6 +114,63 @@ Fortunately, this is another simple option to set inside the `new Freezeframe` i
 e = new Freezeframe({ trigger: false, responsive: false });
 ```
 
+### play gifs by default
+
+With all the scripts so far, freezeframe is set to activate by default as soon as a page is loaded. But if you want the default behavior to be allowing gifs to play, here's an alternate script from [sen.fish](https://sen.fish/) that does just that. It also creates just one single toggle button that changes its text, instead of separate start and stop buttons.
+
+The JavaScript (replaces *all* JS code from Bechno Kid's tutorial):
+
+```javascript
+let ffInstance = null;
+
+function toggle() {
+  const btn = document.getElementById("toggle-btn");
+  const imgs = document.querySelectorAll('.freezeframe');
+
+  if (ffInstance === null) {
+    imgs.forEach(img => {
+      if (!img.dataset.ffOriginal) {
+        img.dataset.ffOriginal = img.src;
+      }
+    });
+    ffInstance = new Freezeframe('.freezeframe', {
+      trigger: 'hover',
+      responsive: false,
+      overlay: false
+    });
+    btn.textContent = "Enable animations";
+  } else {
+    ffInstance.destroy();
+    ffInstance = null;
+    
+    document.querySelectorAll('.ff-container').forEach(container => {
+      const innerImg = container.querySelector('img.ff-image');
+      if (innerImg) {
+        innerImg.classList.remove('ff-image');
+        container.parentNode.replaceChild(innerImg, container);
+      }
+    });
+    imgs.forEach(img => {
+      if (img.dataset.ffOriginal) {
+        img.src = img.dataset.ffOriginal;
+      }
+    });
+    btn.textContent = "Disable animations";
+  }
+}
+```
+ 
+ And the HTML:
+ 
+ ```html
+ <button id="toggle-btn" onclick="toggle()">Disable animations</button>
+ ```
+
+Toward the middle of the JS code block, you can see the `new Freezeframe()` initialization. If you want to customize any of those options, this is again where to do it--for example, note that Sen's script has the gifs set to animate on hover, so if you don't want that then this is where you'd change it.
+
+For what it's worth, I personally feel that if your purpose in freezing gifs is to improve accessibility for those with visual sensitivities, then the safer bet is to have them stopped by default. The [WCAG accessibility standards](https://www.w3.org/TR/WCAG21/#pause-stop-hide) consider auto-playing animations acceptable as long as they can be stopped within 3 seconds--but consider, how obvious is your stop button, to be confident that a user will locate it within 3 seconds (no matter their screen size)?
+
+
 ### an aside about package versions
 
 Is your code still not having the results that I'm claiming it should have? One possible reason is that you and I might be using different _package versions_. When the creators of freezeframe.js make changes to its code, they release a new version of the package. And you never know what kind of things can change when they update the package! If you're following Bechno Kid's tutorial, then you probably used this URL in your script source: `https://unpkg.com/freezeframe/dist/freezeframe.min.js`
@@ -133,6 +192,7 @@ Since I just went over fixes for some of the problems you might encounter, I fig
   - Update: Well, it _seemingly_ worked when testing locally, but did not work anymore once uploaded to Neocities 🙃 
 - One weird thing that MIGHT actually make a difference is what order the tags appear in your `<head>`! For instance, if you had two CSS files linked in your `<head>` in this order: `<link rel="stylesheet" href="styles1.css"><link rel="stylesheet" href="styles2.css">` ...then if there were any conflicts between `styles1.css` and `styles2.css`, `styles2.css` would win and override the "earlier" file. So, I'm not _sure_ if the same thing applies to the order of CSS links and JS script tags... but it's possible that you need to make sure to load in your own CSS _below_ the `<script>` that links to the freezeframe.js URL in order for your styles to override freezeframe's defaults.
   - I wonder if my problem with not being able to override the margins from being set to 0 was ultimately a matter of the file loading order... But unfortunately for me, my site is built with [Astro](https://astro.build/), which has its own way of processing CSS. My HTML files don't even _have_ a link tag, so I can't just bump it down lower in the head. :/
+  - UPDATE: **I think the tag order is the answer.** I added an [extra CSS file](https://github.com/caesiumtea/entropically-nc/blob/main/public/ff.css) that bypasses Astro's bundling, which contains just the couple styles that were needed to override the freezeframe defaults, and I placed its link tag below the freezeframe script tag. And I *think* my overrides are actually taking now!
 
 ## saving user preferences with localStorage
 
