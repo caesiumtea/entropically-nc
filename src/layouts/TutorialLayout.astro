@@ -2,7 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import { DateTime } from "luxon";
 
-const { frontmatter } = Astro.props;
+const { frontmatter, headings } = Astro.props;
 const luxonPub = DateTime.fromJSDate(frontmatter.pubDate, { zone: "utc" });
 
 let edited;
@@ -17,12 +17,11 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+    <article>
     <p class="published">
         published {luxonPub.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
         { edited && ` | updated ${luxonEdit.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}`}
     </p>
-    
-
     <figure class="post-hero">
         <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
         <figcaption set:html={frontmatter.image.caption} />
@@ -41,4 +40,5 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
             ))
         }
     </div>
+</article>
 </BaseLayout>
