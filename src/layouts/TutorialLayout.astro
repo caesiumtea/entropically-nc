@@ -23,10 +23,10 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
         published {luxonPub.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
         { edited && ` | updated ${luxonEdit.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}`}
     </p>
-    <ToC headings={headings} />
+    { headings.length > 0 && <ToC headings={headings} />}
     <figure class="post-hero">
         <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-        <figcaption set:html={frontmatter.image.caption} />
+        {frontmatter.image.caption && <figcaption set:html={frontmatter.image.caption} />}
     </figure>
     <div class="post">
         <slot />
