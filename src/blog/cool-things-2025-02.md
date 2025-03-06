@@ -11,6 +11,18 @@ tags: ["cool things", "neocities", "apps and tools"]
 
 this is the first in a series of posts that i'm hoping to keep doing--a series that i've actually had the idea to make for a couple of years now! the idea is just that, pretty often when i'm browsing the internet or whatever i come across something that i get excited to discover, and i thought it might be nice to pass that excitement on to others too. some of my friends regard me as a person who always has a recommendation for every situation, particularly when it comes to software and tools, so this is also my baby step toward cataloging some of that knowledge for my and others' future reference.
 
+## tl;dr
+- [silverbullet](https://silverbullet.md/): notes app
+- [spirit city](https://store.steampowered.com/app/2113850/Spirit_City_Lofi_Sessions/): lofi focus app
+- [r/neocities reddit](https://www.reddit.com/r/neocities/)
+- [petrapixel](https://petrapixel.neocities.org/): my neocities inspo
+- [pixel space background generator](https://deep-fold.itch.io/space-background-generator)
+- [monogram font by datagoblin](https://datagoblin.itch.io/monogram) 
+- [vscode terminal themes](https://glitchbone.github.io/vscode-base16-term/)
+- [witch's cottage on mynoise](https://mynoise.net/Community/user.php?submission=a2d78f6afdd82aae82a6eb7d1733515932): cozy soundscape
+- [star subculture](https://starsubculture.com/): art platform and directory
+- [rv's scripts](http://www.mf2fm.com/rv/): funky JS effects
+
 ## [silverbullet](https://silverbullet.md/)
 
 okay, i got *really* excited about silverbullet. (i happen to be pretty depressed today so i'm not able to get too excited again, but like, i presumably would still be pretty excited about it if i had the brain chemicals to be.) in fact, the entire idea of "hey remember how i wanted to make lists of cool things i find? let's actually do that now" was sparked by finding silverbullet and having the huge urge to just tell everyone about it. 
@@ -57,7 +69,7 @@ here's an [imgur compilation](https://imgur.com/a/yqe4cBz) of all the iterations
 
 this pay-what-you-want pixel font is incredibly cute, and it even has an *italic* variant! at the time of writing, it's what i currently use as the pixel font option on this website--though unfortunately it doesn't really play nice with my CSS, so i am thinking about replacing it. which is a bummer because it really is so dang cute.
 
-## [vscode terminal themes](https://glitchbone.github.io/vscode-base16-term/#/) 
+## [vscode terminal themes](https://glitchbone.github.io/vscode-base16-term/) 
 
 i've been using vscode for years (i absolutely love it and recommend it to all web devs and other coders, by the way, despite my grumpiness toward microsoft - planning to write a whole post on vscode soon), and i've had fun installing lots of different color themes for it, but a funny thing is that the built-in terminal doesn't change colors along with the themes. i didn't really give it much thought before, maybe assumed that it just wasn't changeable... until i stumbled onto [petrapixel's vscode tips](https://petrapixel.neocities.org/coding/my-setup), which linked out to this site! turns out that you need to manually paste some code into your settings file in order to change the terminal colors, but here you can just select a color palette from the list and they'll generate that code for you with one click! (i'm personally using Monokai right now, by the by.)
 

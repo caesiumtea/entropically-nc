@@ -179,6 +179,7 @@ body {
     /* display: grid;
     grid-template-columns: 1fr 80ch 1fr; */
     position: relative;
+    list-style-image: url("/img/c16-icon-star_foollovers.gif");
 }
 
 #page-container {
@@ -244,6 +245,10 @@ li p {
     margin: 0;
 }
 
+li img {
+    display: inline;
+}
+
 em, strong {
     color: var(--color-accent-1);
 }
@@ -303,10 +308,6 @@ blockquote {
     padding: 1rem;
     padding-left: 2rem;
     margin-left: 2rem;
-}
-
-li img {
-    display: inline;
 }
 
 .buttons {
@@ -387,7 +388,7 @@ li img {
     font-size: 180%;
     font-weight: 600;
     font-family: var(--font-accent);
-    list-style-type: none;
+    list-style: none;
 }
 
 .nav-links > li {
@@ -399,7 +400,7 @@ li img {
 }
 
 .nav-links ul {
-    list-style-type: none;
+    list-style: none;
     font-weight: 500;
     font-size: 80%;
 }

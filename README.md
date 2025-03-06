@@ -22,7 +22,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
   - breadcrumbs
 - find a pixel font with tighter spacing tbh
 - make tags index into a component instead of duplicating code on blog and tags pages
-- figure out image optimization (try built in astro component or cloudinary)
+- convert images to Astro Image component
 - custom scrollbars for e.g. changelog
 
 ## license
