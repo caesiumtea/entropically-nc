@@ -672,6 +672,10 @@ main.splash {
 
 /* post's */
 
+.post {
+    margin-bottom: 2rem;
+}
+
 .post-hero {
     background-color: var(--color-bg-second);
     padding: 1rem;
