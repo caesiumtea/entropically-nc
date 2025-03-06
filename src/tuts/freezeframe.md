@@ -4,7 +4,7 @@ pubDate: 2025-03-03
 editDate: 2025-03-05
 description: 'want to make your site more accessible to users with motion sensitivity, but struggling to get freezeframe.js working? here are some tips that might help!'
 image:
-     url: '/img/blinkies.png'
+     url: '../assets/img/blinkies.png'
      alt: 'Several web blinkies arranged in rows, featuring slogans such as "tumblr girl" and "disability pride".'
      caption: 'what would we do without blinkies.... (featuring a random assortment from <a href="https://blinkies.cafe/">blinkies.cafe</a>--and no, this image is not supposed to be blinking right now.)'
 tags: ["web craft", "accessibility"]

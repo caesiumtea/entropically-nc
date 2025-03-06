@@ -1,3 +1,4 @@
+- 2025-03-06: new blog post, [cool things i found this month](/blog/cool-things-2025-02/)!
 - 2025-03-05: added auto-generated table of contents to tutorials
 - 2025-03-04: updated [freezeframe post](/learn/freezeframe); added ff.css to fix freezeframe-based styles; added background image on page margins for main site; pixel font no longer has an increased size; other small styling changes
 - 2025-03-03: added the first "learn" post, about [how to pause gifs](/learn/freezeframe) and how to troubleshoot freezeframe.js! 
