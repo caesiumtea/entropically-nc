@@ -1,11 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Changelog from "../components/Changelog.astro";
+import Navigation from "../components/Navigation.astro";
 
 const pageTitle = "vae's blog n stuff";
 ---
-
 <BaseLayout pageTitle={pageTitle}>
+    <nav class="nav-sidebar" slot="left-top">
+        <Navigation />
+    </nav>
     <section>
         <p>
             welcome! i'm vance (or vae), and this is my silly lil personal site. i expect that its main use will be the <a href="/blog">blog</a>, but i'm still just discovering what to do with it as i go along. the site is still just a smol baby, but feel free to look around!

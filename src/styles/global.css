@@ -232,6 +232,7 @@ main {
     width: 100%;
     /* 10px is the border width of main */
     max-width: min(80ch, calc(100vw - 10px));
+    text-align: center;
 
 }
 
@@ -809,6 +810,7 @@ main.splash {
     #left-top-col, #left-bottom-col, #right-col {
         margin: 1rem;
         width: unset;
+        text-align: start;
     }
 
     #left-top-col {
@@ -823,7 +825,9 @@ main.splash {
         padding-top: 0;
     }
 
-
+    .nav-sidebar summary {
+        list-style-position: outside;
+    }
 }
 
 
