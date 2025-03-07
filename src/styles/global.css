@@ -184,13 +184,23 @@ body {
 
 #page-container {
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template:
+    "h"
+    "leftTop"
+    "content"
+    "leftBottom"
+    "right"
+    "f";
     min-height: 100vh;
 }
 
+header {
+    grid-area: h;
+}
+
 main {
-    flex: 1;
+    grid-area: content;
     margin: 1rem auto;
     padding: 1.5rem;
     padding-bottom: 3rem;
@@ -198,6 +208,41 @@ main {
     border: 5px solid var(--color-accent-2);
     /* border-right: 5px solid var(--color-accent-2); */
     background-color: var(--color-bg-primary);
+}
+
+#left-top-col {
+    grid-area: leftTop;
+}
+
+#left-bottom-col {
+    grid-area: leftBottom;
+}
+
+#right-col {
+    grid-area: right;
+}
+
+#left-top-col, #left-bottom-col, #right-col {
+    background-color: var(--color-bg-primary);
+    border: 2px dashed var(--color-accent-2);
+    margin: 1rem;
+    padding: 1rem;
+    height: fit-content;
+}
+
+footer {
+    grid-area: f;
+    /* display: flex;
+    gap: 1rem; */
+    padding: 0rem 2rem;
+    background-color: var(--color-bg-second);
+    text-align: center;
+    border-top: solid 2px var(--color-accent-2);
+}
+
+footer a {
+    /* padding: 0.5rem 1rem; */
+    color: var(--color-text-second);
 }
 
 section {
@@ -251,20 +296,6 @@ li img {
 
 em, strong {
     color: var(--color-accent-1);
-}
-
-footer {
-    /* display: flex;
-    gap: 1rem; */
-    padding: 0rem 2rem;
-    background-color: var(--color-bg-second);
-    text-align: center;
-    border-top: solid 2px var(--color-accent-2);
-}
-
-footer a {
-    /* padding: 0.5rem 1rem; */
-    color: var(--color-text-second);
 }
 
 code {
@@ -758,6 +789,31 @@ main.splash {
     }
 
 }
+
+@media screen and (min-width: 150ch) {
+    #page-container {
+        grid-template:
+            "h h h" auto
+            "leftTop content right" auto
+            "leftBottom content right" 1fr
+            "f f f" auto
+            / 1fr 80ch 1fr;
+        align-content: start;
+    }
+
+    #left-top-col {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #left-bottom-col {
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
 
 /* @media screen and (min-width: 1200px) {
     .toc {
