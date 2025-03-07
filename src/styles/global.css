@@ -422,10 +422,11 @@ blockquote {
 
 .nav-links {
     color: var(--color-text-second);
-    font-size: 180%;
-    font-weight: 600;
+    font-size: 150%;
+    font-weight: 500;
     font-family: var(--font-accent);
     list-style: none;
+    line-height: 1.2;
 }
 
 .nav-links > li {
@@ -438,8 +439,27 @@ blockquote {
 
 .nav-links ul {
     list-style: none;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 80%;
+    padding: 0;
+}
+
+.nav-links summary {
+    width: fit-content;
+    list-style-position: outside;
+}
+
+.nav-links details {
+    display: inline-block;
+    text-align: start;
+}
+
+/* sidebar */
+.nav-sidebar-header {
+    color: var(--color-text-second);
+    font-size: 150%;
+    font-weight: 500;
+    font-family: var(--font-accent);
 }
 
 /* navbar (desktop) */
@@ -825,8 +845,12 @@ main.splash {
         padding-top: 0;
     }
 
-    .nav-sidebar summary {
-        list-style-position: outside;
+    .nav-sidebar ul {
+        padding: 0;
+    }
+
+    .nav-sidebar-header {
+        list-style-position: inside;
     }
 }
 
