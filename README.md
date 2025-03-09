@@ -6,6 +6,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 
 ## to do
 - fixed "return to top" icon in bottom right
+- make the right sidebar sticky ONLY when it holds table of contents
 - stop having two duplicate navs, figure out which ur gonna use
 - use right side column for TOC on blog/learn posts and status.cafe feed otherwise
 - sitemap - maybe not strictly needed just yet, but probably soon
