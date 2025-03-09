@@ -741,6 +741,13 @@ main.splash {
     margin: 0 1em 0.5em 1em;
 }
 
+/* about me */
+
+.blinkies img {
+    width: 150px;
+    height: 20px;
+}
+
 /* changelog full */
 
 .changelog li {
@@ -834,6 +841,8 @@ main.splash {
     text-indent: 0;
     margin: 0;
 }
+
+
 
 
 
