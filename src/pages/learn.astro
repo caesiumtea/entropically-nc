@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import HomeLayout from "../layouts/HomeLayout.astro";
+import BlogMetaLayout from "../layouts/BlogMetaLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 
 const pageTitle = "website tips and tutorials";
@@ -17,7 +17,7 @@ const tags = [
 tags.sort();
 ---
 
-<HomeLayout pageTitle={pageTitle}>
+<BlogMetaLayout pageTitle={pageTitle}>
     <p>
         some advice and tutorials for web dev, particularly for making neocities
         pages and/or for folks who are new to web dev!
@@ -44,7 +44,4 @@ tags.sort();
             ))
         }
     </div>
-    <p slot="right" class="centered large-text">
-        <a href="/rss.xml">rss feed</a>
-    </p>
-</HomeLayout>
+</BlogMetaLayout>

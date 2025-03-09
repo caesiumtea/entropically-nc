@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import HomeLayout from "../layouts/HomeLayout.astro";
+import BlogMetaLayout from "../layouts/BlogMetaLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import SiteButtons from "../components/SiteButtons.astro";
 
@@ -16,7 +16,7 @@ const tags = [...new Set(allPosts.map((post: any) => post.data.tags).flat())];
 tags.sort();
 ---
 
-<HomeLayout pageTitle={pageTitle}>
+<BlogMetaLayout pageTitle={pageTitle}>
     <section>
         <h2>blog post archive</h2>
         <ul>
@@ -44,8 +44,5 @@ tags.sort();
             }
         </div>
     </section>
-    <p slot="right" class="centered large-text">
-        <a href="/rss.xml">rss feed</a>
-    </p>
     <SiteButtons slot="right" />
-</HomeLayout>
+</BlogMetaLayout>
