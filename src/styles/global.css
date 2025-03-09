@@ -365,6 +365,10 @@ blockquote {
     font-size: 75%;
 }
 
+.large-text {
+    font-size: 150%;
+}
+
 .large-accent-text {
     font-size: 250%;
     font-family: var(--font-accent);
@@ -592,6 +596,7 @@ blockquote {
     border-bottom-left-radius: 5px;
     width: fit-content;
     height: fit-content;
+    z-index: 5;
 }
 
 #access-icon img {
@@ -620,6 +625,7 @@ blockquote {
     text-align: center;
     max-height: calc(100vh - 10px);
     overflow: auto;
+    z-index: 5;
 }
 
 #access-menu h2 {
