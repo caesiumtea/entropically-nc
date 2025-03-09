@@ -11,7 +11,7 @@ const pageTitle = "welcome in!";
     <Head pageTitle={pageTitle} />
     <body class="splash">
         <AccessMenu />
-        <div id="page-container">
+        <div id="splash-page-container">
             <h1 id="splash-title">entropically</h1>
             <main class="splash centered">
                 <img
@@ -24,11 +24,19 @@ const pageTitle = "welcome in!";
                         welcome to vance's silly little internet corner!
                     </h2>
                     <p>
-                        please use the accessibility menu in the top right
-                        corner to set your preferences (e.g., to enable animated GIFs). preferences will be saved in your browser cache.
+                        please use the settings menu in the top right
+                        corner to set your preferences (e.g., to enable animated GIFs or disable cursor effects). preferences will be saved in your browser cache.
                     </p>
+                    <p>if your page is stretching weirdly to the side or bottom, try disabling the cursor animation to prevent this.</p>
                     <p>this site is safe for work (though do expect some swearing), designed mobile-first, and i try my best to make it as accessible as possible.</p>
                     <p class="large-accent-text"><a href="/home">enter</a></p>
+                    <div class="buttons splash">
+    <img src="/img/buttons/mobilefriendly1.gif" alt="mobile friendly">
+    <a href="https://neocities.org/" rel="noopener noreferrer"><img src="/img/buttons/neocities_.png" alt="rainbow flag background with the Neocities cat logo and the text: Neocities: long live the web"></a>
+    <img src="/img/buttons/gaysite.gif" alt="flashing rainbow pride flag with the text: this site is gay" class="freezeframe">
+    <img src="/img/buttons/parental.gif" alt="parental advisory: I say fuck a lot">
+
+                    </div>
                 </div>
             </main>
             <Footer />

@@ -685,6 +685,10 @@ main.splash {
     margin-top: 3rem;
 }
 
+.buttons.splash {
+    gap: 8px;
+}
+
 
 
 /* home page */
