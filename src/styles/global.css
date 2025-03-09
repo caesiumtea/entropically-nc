@@ -724,8 +724,21 @@ main.splash {
     margin: 0.5rem 0;
 }
 
-img.sidebar {
+.sidebar img {
     margin: auto;
+}
+
+#statuscafe {
+    padding: .5em;
+    border: 1px solid var(--color-accent-2);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
 }
 
 /* changelog full */
