@@ -6,6 +6,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 
 ## to do
 - stop having two duplicate navs, figure out which ur gonna use
+- use right side column for TOC on blog/learn posts and status.cafe feed otherwise
 - sitemap - maybe not strictly needed just yet, but probably soon
 - add comment widget - probably [giscus](https://giscus.app/)? or ayano's?
 - fix cursor effect causing page to stretch beyond edges x_x (this will be hard... advice encouraged lol)

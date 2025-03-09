@@ -1,0 +1,11 @@
+---
+import SiteButtons from "../components/SiteButtons.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+import Log from "../content/changelog.md";
+
+const pageTitle = "changelog";
+---
+<HomeLayout pageTitle={pageTitle}>
+    <Log />
+    <SiteButtons slot="right" />
+</HomeLayout>
