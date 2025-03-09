@@ -5,7 +5,10 @@ import Log from "../content/changelog.md";
 
 const pageTitle = "changelog";
 ---
+
 <HomeLayout pageTitle={pageTitle}>
-    <Log />
+    <div class="changelog">
+        <Log />
+    </div>
     <SiteButtons slot="right" />
 </HomeLayout>

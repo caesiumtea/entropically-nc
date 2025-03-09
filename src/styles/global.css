@@ -728,6 +728,16 @@ img.sidebar {
     margin: auto;
 }
 
+/* changelog full */
+
+.changelog li {
+    padding: 0.4rem;
+}
+
+.changelog li:nth-of-type(2n) {
+    background-color: var(--color-bg-fourth);
+}
+
 /* tags */
 
 .tags {
