@@ -5,12 +5,11 @@ this is the code for my blog on [neocities](https://entropically.neocities.org/)
 made with [Astro](https://astro.build/)! it's my first time using astro, please give me advice lol
 
 ## to do
+- stop having two duplicate navs, figure out which ur gonna use
 - sitemap - maybe not strictly needed just yet, but probably soon
-- add fun buttons to about me page
-- add comment widget - probably [giscus](https://giscus.app/)?
+- add comment widget - probably [giscus](https://giscus.app/)? or ayano's?
 - fix cursor effect causing page to stretch beyond edges x_x (this will be hard... advice encouraged lol)
 - make cute layout graphics (wanna try out image borders!)
-- make 3-column desktop layout -- requires restructuring base layout template ugghhhh
 - write tutorial about how i made my accessibility menu (toggling fonts and scripts)
 - write my general advice/recs for anyone making their first website
 - add light theme and button to toggle theme
