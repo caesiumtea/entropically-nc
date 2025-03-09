@@ -70,5 +70,6 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
         <Log />
     </div>
     <a href="/changelog" slot="left-bottom">(full view)</a>
-    <slot name="right" slot="right" />
+    {headings.length > 0 && <ToC slot="right" headings={headings} />}
+    <p slot="right"><a class="to-top" href="#">return to top of page</a></p>
 </BaseLayout>

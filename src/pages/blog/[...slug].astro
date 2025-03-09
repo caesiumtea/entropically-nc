@@ -3,7 +3,6 @@
 import { CollectionEntry, getCollection, render } from "astro:content";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import type { MarkdownHeading } from 'astro';
-import SiteButtons from "../../components/SiteButtons.astro";
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
@@ -32,8 +31,4 @@ const { Content } = await render(post);
 
 <BlogLayout frontmatter={post.data} headings={headings}>
     <Content />
-    <p slot="right" class="centered large-text">
-        <a href="/rss.xml">rss feed</a>
-    </p>
-    <SiteButtons slot="right" />
 </BlogLayout>

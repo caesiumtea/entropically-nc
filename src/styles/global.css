@@ -800,6 +800,11 @@ img.sidebar {
     padding-left: 1rem;
 }
 
+.sidebar .toc {
+    width: 100%;
+    text-align: start;
+}
+
 .license-box {
     display: flex;
     flex-direction: row;
@@ -852,6 +857,7 @@ img.sidebar {
 
 }
 
+/* activate 3 col layout only above this width */
 @media screen and (min-width: 150ch) {
     #page-container {
         grid-template:
@@ -861,6 +867,7 @@ img.sidebar {
             "f f f" auto
             / 1fr 80ch 1fr;
         align-content: start;
+        position: relative;
     }
     
     #left-top-col, #left-bottom-col, #right-col {
@@ -881,6 +888,11 @@ img.sidebar {
         padding-top: 0;
     }
 
+    #right-col {
+        position: sticky;
+        top: 1rem;
+    }
+
     .nav-sidebar ul {
         padding: 0;
     }
@@ -889,7 +901,7 @@ img.sidebar {
         list-style-position: inside;
     }
 
-    h2.sidebar {
+    .sidebar h2 {
         font-size: 1.5rem;
     }
 
@@ -900,6 +912,11 @@ img.sidebar {
 
     .sidebar.buttons {
         flex-direction: column;
+    }
+
+    .sidebar .toc {
+        font-size: 85%;
+        width: 100%;
     }
 }
 
