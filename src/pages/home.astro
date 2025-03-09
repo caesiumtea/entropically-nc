@@ -1,17 +1,10 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Changelog from "../components/Changelog.astro";
-import Navigation from "../components/Navigation.astro";
+import SiteButtons from "../components/SiteButtons.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
 
 const pageTitle = "vae's blog n stuff";
 ---
-<BaseLayout pageTitle={pageTitle}>
-    <nav class="nav-sidebar" slot="left-top">
-        <details>
-            <summary class="nav-sidebar-header">navigation</summary>
-            <Navigation />
-        </details>
-    </nav>
+<HomeLayout pageTitle={pageTitle}>
     <section>
         <p>
             welcome! i'm vance (or vae), and this is my silly lil personal site. i expect that its main use will be the <a href="/blog">blog</a>, but i'm still just discovering what to do with it as i go along. the site is still just a smol baby, but feel free to look around!
@@ -60,17 +53,5 @@ const pageTitle = "vae's blog n stuff";
                 >&lt;a href="https://entropically.neocities.org/" rel="noopener noreferrer"&gt;&lt;img src="https://entropically.neocities.org/img/entropically-button.png" alt="88x31 button with a sunset-colored gradient and a few sketchy purple stars, and then the word 'entropically' written in a white pixel font."&gt;&lt;/a&gt;</textarea>
         </div>
     </section>
-    <section id="changelog">
-        <h2>changelog</h2>
-        <Changelog />
-    </section>
-</BaseLayout>
-<style>
-    @media screen and (min-width: 636px) {
-        #linkback-button {
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-        }
-    }
-</style>
+    <SiteButtons slot="right" />
+</HomeLayout>

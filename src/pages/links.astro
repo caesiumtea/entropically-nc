@@ -1,9 +1,10 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteButtons from "../components/SiteButtons.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
 const pageTitle = "links out";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<HomeLayout pageTitle={pageTitle}>
     <section>
         <h2>friends</h2>
         <p>
@@ -25,4 +26,5 @@ const pageTitle = "links out";
             <li><a href="https://melonland.net/" rel="noopener noreferrer">melonland</a></li>
         </ul>
     </section>
-</BaseLayout>
+    <SiteButtons slot="right" />
+</HomeLayout>

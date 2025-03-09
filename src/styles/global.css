@@ -700,17 +700,22 @@ main.splash {
     margin: auto;
 }
 
-#linkback-button div {
-    max-width: 36ch;
-}
-
-#changelog-box {
-    height: 16ch;
+.changelog-box {
+    height: 30ch;
     overflow: auto;
+    text-align: start;
 }
 
-#changelog-box ul {
+.changelog-box ul {
     padding-left: 1rem;
+}
+
+.sidebar {
+    margin: 0.5rem 0;
+}
+
+img.sidebar {
+    margin: auto;
 }
 
 /* tags */
@@ -800,6 +805,7 @@ main.splash {
 @media screen and (min-width: 600px) {
     main {
         max-width: 80ch;
+        min-width: 70ch;
     }
 
     #navbar {
@@ -812,6 +818,16 @@ main.splash {
 
     #nav-skip {
         display: none;
+    }
+
+    #linkback-button {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #linkback-button div {
+        max-width: 36ch;
     }
 
 }
@@ -851,6 +867,19 @@ main.splash {
 
     .nav-sidebar-header {
         list-style-position: inside;
+    }
+
+    h2.sidebar {
+        font-size: 1.5rem;
+    }
+
+    .changelog-box.sidebar {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .sidebar.buttons {
+        flex-direction: column;
     }
 }
 

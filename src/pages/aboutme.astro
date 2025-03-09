@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
 
 const pageTitle = "about me";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<HomeLayout pageTitle={pageTitle}>
     <section>
         <h2>bio</h2>
         <p>
@@ -181,4 +181,30 @@ const pageTitle = "about me";
         <p>coming soon....??</p>
         <div class="buttons"></div>
     </section>
-</BaseLayout>
+    <div slot="right" class="sidebar buttons">
+        <img src="/img/buttons/fluffmoth/theygq.png" alt="they/them with genderqueer flag">
+        <img src="/img/buttons/fluffmoth/Genderqueer.png" alt="Gender queer">
+        <img src="/img/buttons/fluffmoth/nonbinary.png" alt="non-binary">
+        <img src="/img/buttons/fluffmoth/transmasc.png" alt="trans masc">
+        <img src="/img/buttons/fluffmoth/demiboy.png" alt="demi boy">
+        <img src="/img/buttons/fluffmoth/neurodivergent.png" alt="neurodivergent">
+        <img src="/img/buttons/fluffmoth/adhd.png" alt="ADHD">
+        <a href="https://dragonsroost.neocities.org/pluralstuff" rel="noopener noreferrer"><img src="/img/buttons/fluffmoth/plural.png" alt="plural"></a>
+        <img src="/img/buttons/fluffmoth/disabled.png" alt="disabled">
+        <img src="/img/buttons/fluffmoth/depression.png" alt="depression">
+        <img src="/img/buttons/fluffmoth/pansexual.png" alt="pansexual">
+        <img src="/img/buttons/fluffmoth/arospec.png" alt="aro spec">
+        <img src="/img/buttons/fluffmoth/achillean.png" alt="achillean">
+        <img src="/img/buttons/fluffmoth/poly.png" alt="polyamorous">
+        <a href="https://www.16personalities.com/infp-personality" rel="noopener noreferrer"><img src="/img/buttons/fluffmoth/infp.png" alt="INFP"></a>
+        <a href="https://easydamus.com/chaoticgood.html" rel="noopener noreferrer"><img src="/img/buttons/fluffmoth/chaoticgood.png" alt="chaotic good"></a>
+        <img src="/img/buttons/fluffmoth/artist.png" alt="artist">
+        <img src="/img/buttons/fluffmoth/coder.png" alt="coder">
+        <img src="/img/buttons/fluffmoth/crafter.png" alt="crafter">
+        <img src="/img/buttons/fluffmoth/writer.png" alt="writer">
+        <img src="/img/buttons/fluffmoth/witch.png" alt="witch">
+        <a href="https://mspaintadventures.fandom.com/wiki/Derse" rel="noopener noreferrer"><img src="/img/buttons/fluffmoth/derse.png" alt="derse"></a>
+        <a href="https://idbuttons.neocities.org/" rel="noopener noreferrer"><img src="/img/buttons/fluffmoth/freebuttons.png" alt="free buttons"></a>
+
+    </div>
+</HomeLayout>

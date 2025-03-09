@@ -1,7 +1,7 @@
 ---
 // ToC code source: https://noahflk.com/blog/astro-table-of-contents
 import { CollectionEntry, getCollection, render } from "astro:content";
-import MarkdownPostLayout from "../../layouts/MarkdownPostLayout.astro";
+import BlogLayout from "../../layouts/BlogLayout.astro";
 import type { MarkdownHeading } from 'astro';
 
 export async function getStaticPaths() {
@@ -29,6 +29,6 @@ const { post, headings } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<MarkdownPostLayout frontmatter={post.data} headings={headings}>
+<BlogLayout frontmatter={post.data} headings={headings}>
     <Content />
-</MarkdownPostLayout>
+</BlogLayout>

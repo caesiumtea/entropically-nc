@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 
 const pageTitle = "website tips and tutorials";
@@ -17,7 +17,7 @@ const tags = [
 tags.sort();
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<HomeLayout pageTitle={pageTitle}>
     <p>
         some advice and tutorials for web dev, particularly for making neocities
         pages and/or for folks who are new to web dev!
@@ -44,4 +44,5 @@ tags.sort();
             ))
         }
     </div>
-</BaseLayout>
+    <p slot="right">nothing here yet lol, maybe i should remove this box huh?</p>
+</HomeLayout>

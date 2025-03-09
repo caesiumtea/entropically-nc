@@ -1,9 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+import SiteButtons from "../components/SiteButtons.astro";
+
 const pageTitle = "vae's guestbook";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<HomeLayout pageTitle={pageTitle}>
     <p><a href="https://entropically.atabook.org/">(view externally)</a></p>
     <iframe src="https://entropically.atabook.org/" aria-label="guestbook" loading="lazy"></iframe>
-</BaseLayout>
+    <SiteButtons slot="right" />
+
+</HomeLayout>

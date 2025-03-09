@@ -1,0 +1,25 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Changelog from "../components/Changelog.astro";
+import Navigation from "../components/Navigation.astro";
+import Log from "../content/changelog.md";
+
+const { pageTitle } = Astro.props;
+
+---
+<BaseLayout pageTitle={pageTitle}>
+    <nav class="nav-sidebar" slot="left-top">
+        <details>
+            <summary class="nav-sidebar-header">navigation</summary>
+            <Navigation />
+        </details>
+    </nav>
+    <slot />
+
+    <a slot="left-bottom" href="/guestbook"><img src="/img/buttons/signguest.gif" alt="Sign my guestbook" class="sidebar"></a>
+    <h2 class="sidebar" slot="left-bottom">changelog</h2>
+    <div class="changelog-box sidebar box" slot="left-bottom">
+        <Log />
+    </div>
+    <slot name="right" slot="right" />
+</BaseLayout>
