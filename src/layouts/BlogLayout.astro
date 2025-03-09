@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { DateTime } from "luxon";
-import ToC from '../components/ToC.astro';
-import { Image } from 'astro:assets';
+import ToC from "../components/ToC.astro";
+import { Image } from "astro:assets";
+import Navigation from "../components/Navigation.astro";
+import Log from "../content/changelog.md";
+
 
 const { frontmatter, headings } = Astro.props;
 const luxonPub = DateTime.fromJSDate(frontmatter.pubDate, { zone: "utc" });
@@ -18,28 +21,53 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <article>
-    <p class="published">
-        published {luxonPub.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
-        { edited && ` | updated ${luxonEdit.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}`}
-    </p>
-    { headings.length > 0 && <ToC headings={headings} />}
-    <figure class="post-hero">
-        <Image src={frontmatter.cover} alt={frontmatter.alt} />
-        {frontmatter.caption && <figcaption set:html={frontmatter.caption} />}
-    </figure>
-    <div class="post">
-        <slot />
-    </div>
+    <nav class="nav-sidebar" slot="left-top">
+        <details>
+            <summary class="nav-sidebar-header">navigation</summary>
+            <Navigation />
+        </details>
+    </nav>
 
-    <div class="tags">
-        {
-            frontmatter.tags.map((tag: string) => (
-                <p class="tag">
-                    <a href={`/tut-tags/${tag}`}>{tag}</a>
-                </p>
-            ))
-        }
+    <article>
+        <p class="published">
+            published {luxonPub.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
+            {
+                edited &&
+                    ` | updated ${luxonEdit.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}`
+            }
+        </p>
+        {headings.length > 0 && <ToC headings={headings} />}
+        <figure class="post-hero">
+            <Image src={frontmatter.cover} alt={frontmatter.alt} />
+            {
+                frontmatter.caption && (
+                    <figcaption set:html={frontmatter.caption} />
+                )
+            }
+        </figure>
+        <div class="post">
+            <slot />
+        </div>
+
+        <div class="tags">
+            {
+                frontmatter.tags.map((tag: string) => (
+                    <p class="tag">
+                        <a href={`/tut-tags/${tag}`}>{tag}</a>
+                    </p>
+                ))
+            }
+        </div>
+    </article>
+    <a slot="left-bottom" href="/guestbook"
+        ><img
+            src="/img/buttons/signguest.gif"
+            alt="Sign my guestbook"
+            class="sidebar"
+        /></a>
+    <h2 class="sidebar" slot="left-bottom">changelog</h2>
+    <div class="changelog-box sidebar box" slot="left-bottom">
+        <Log />
     </div>
-</article>
+    <slot name="right" slot="right" />
 </BaseLayout>

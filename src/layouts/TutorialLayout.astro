@@ -3,6 +3,8 @@ import BaseLayout from "./BaseLayout.astro";
 import { DateTime } from "luxon";
 import ToC from '../components/ToC.astro';
 import { Image } from 'astro:assets';
+import Navigation from "../components/Navigation.astro";
+import Log from "../content/changelog.md";
 
 
 const { frontmatter, headings } = Astro.props;
@@ -20,6 +22,12 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+    <nav class="nav-sidebar" slot="left-top">
+        <details>
+            <summary class="nav-sidebar-header">navigation</summary>
+            <Navigation />
+        </details>
+    </nav>
     <article>
     <p class="published">
         published {luxonPub.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
@@ -44,4 +52,15 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
         }
     </div>
 </article>
+<a slot="left-bottom" href="/guestbook"
+        ><img
+            src="/img/buttons/signguest.gif"
+            alt="Sign my guestbook"
+            class="sidebar"
+        /></a>
+    <h2 class="sidebar" slot="left-bottom">changelog</h2>
+    <div class="changelog-box sidebar box" slot="left-bottom">
+        <Log />
+    </div>
+    <slot name="right" slot="right" />
 </BaseLayout>

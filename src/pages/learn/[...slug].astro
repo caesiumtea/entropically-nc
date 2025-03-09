@@ -31,4 +31,7 @@ const { Content } = await render(post);
 
 <TutorialLayout frontmatter={post.data} headings={headings}>
     <Content />
+    <p slot="right" class="centered large-text">
+        <a href="/rss.xml">rss feed</a>
+    </p>
 </TutorialLayout>
