@@ -5,6 +5,7 @@ this is the code for my blog on [neocities](https://entropically.neocities.org/)
 made with [Astro](https://astro.build/)! it's my first time using astro, please give me advice lol
 
 ## to do
+- fixed "return to top" icon in bottom right
 - stop having two duplicate navs, figure out which ur gonna use
 - use right side column for TOC on blog/learn posts and status.cafe feed otherwise
 - sitemap - maybe not strictly needed just yet, but probably soon
