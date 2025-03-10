@@ -5,10 +5,10 @@
     --color-bg-fourth: #1e1f1c; /* darkest (repeat) */
     --color-text-primary: #e2e22e; /* yellow */
     --color-text-second: #f92672; /* hot pink */
-    --color-text-third: #a6e22e; /* light purple */
-    --color-accent-1: #66d9ef; /*  */
-    --color-accent-2: #ae81ff; /*  */
-    --color-accent-3: #8c6bc8; /*  */
-    --color-accent-4: #56adbc; /*  */
+    --color-text-third: #a6e22e; /* lime green */
+    --color-accent-1: #66d9ef; /* cyan */
+    --color-accent-2: #ae81ff; /* light purple */
+    --color-accent-3: #785ea8; /* darker purple */
+    --color-accent-4: #4f99a7; /* darker cyan */
     --bg: #1e1f1c;
 }

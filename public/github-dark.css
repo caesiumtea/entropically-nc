@@ -1,0 +1,14 @@
+:root {
+    --color-bg-primary: #020202; /* base */
+    --color-bg-second: #222222; /* lighter */
+    --color-bg-third: #000000; /* darkest */
+    --color-bg-fourth: #000000; /* darkest (repeat) */
+    --color-text-primary: #ffffff; /* white */
+    --color-text-second: #F78166; /*  */
+    --color-text-third: #E3B341; /*  */
+    --color-accent-1: #ec7cb8; /*  */
+    --color-accent-2: #84eb90; /*  */
+    --color-accent-3: #6CA4F8; /*  */
+    --color-accent-4: #2B7489; /*  */
+    --bg: #2B7489;
+}

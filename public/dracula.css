@@ -1,0 +1,14 @@
+:root {
+    --color-bg-primary: #282a36; /* base - dark grey */
+    --color-bg-second: #44475a; /* lighter */
+    --color-bg-third: #202129; /* darkest */
+    --color-bg-fourth: #202129; /* darkest (repeat) */
+    --color-text-primary: #8be9fd; /* light purple */
+    --color-text-second: #ff79c6; /* hot pink */
+    --color-text-third: #f1fa8c; /* light yellow */
+    --color-accent-1: #bd93f9; /*  */
+    --color-accent-2: #f1fa8c; /*  */
+    --color-accent-3: #50fa7b; /*  */
+    --color-accent-4: #ffb86c; /*  */
+    --bg: #282a36;
+}

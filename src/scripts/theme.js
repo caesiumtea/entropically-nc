@@ -1,5 +1,6 @@
 let themeSetting = localStorage?.getItem('theme') ?? 'moodysunset';
-if (!['moodysunset', 'monokai', 'monogruv-light', 'gruvbox-light']
+if (!['moodysunset', 'monokai', 'monogruv-light', 'gruvbox-light', 
+    'vscode-light', 'github-dark', 'dracula', 'monokaisoda']
     .includes(themeSetting)) {
         themeSetting = 'moodysunset';
         window.localStorage.setItem('theme', 'moodysunset');
