@@ -14,8 +14,6 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - make cute layout graphics (wanna try out image borders!)
 - write tutorial about how i made my accessibility menu (toggling fonts and scripts)
 - write my general advice/recs for anyone making their first website
-- add light theme and button to toggle theme
-  - maybe also high contrast themes?
 - animate settings menu sliding in and out???
 - virtual sticker book (inspired by pastelhello.com)
 - make submenus or otherwise improve nav/add more pages to nav
