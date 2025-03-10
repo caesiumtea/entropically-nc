@@ -8,7 +8,6 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - fixed "return to top" icon in bottom right
 - make the right sidebar sticky ONLY when it holds table of contents
 - stop having two duplicate navs, figure out which ur gonna use
-- use right side column for TOC on blog/learn posts and status.cafe feed otherwise
 - sitemap - maybe not strictly needed just yet, but probably soon
 - add comment widget - probably [giscus](https://giscus.app/)? or ayano's?
 - fix cursor effect causing page to stretch beyond edges x_x (this will be hard... advice encouraged lol)
@@ -17,8 +16,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - write my general advice/recs for anyone making their first website
 - add light theme and button to toggle theme
   - maybe also high contrast themes?
-- convert accessibility menu to a details/summary element
-- animate accessibility menu sliding in and out???
+- animate settings menu sliding in and out???
 - virtual sticker book (inspired by pastelhello.com)
 - make submenus or otherwise improve nav/add more pages to nav
   - breadcrumbs
@@ -27,6 +25,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - convert images to Astro Image component
 - custom scrollbars for e.g. changelog
 - replace the svg masking on the hamburger menu with something more performant
+  - or just ditch the hamburger menu and have nav in the "sidebar" only?
 
 ## license
 the license for the **code** of this site is the Hippocratic License, an *almost* open license that says you can do basically anything you want with this code as long as it doesn't hurt people. check out [LICENSE.md](LICENSE.md) as well as the [Hippocratic License website](https://firstdonoharm.dev/). by the way, i really do want you to go ahead and take my code and tinker with it!
