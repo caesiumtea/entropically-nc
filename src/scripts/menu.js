@@ -1,11 +1,18 @@
-document.querySelector('#access-icon').addEventListener('click', () => {
-    document.querySelector('#access-menu').removeAttribute('hidden');
-    document.querySelector('#access-icon').setAttribute('hidden', '');
+let burger = document.getElementById("burger");
+let settings = document.getElementById("access");
+
+burger.addEventListener("keydown", (event) => {
+    let key = event.code;
+    if (key == "Escape") {
+        burger.removeAttribute("open");
+    }
 });
 
-document.querySelector('#access-menu-close').addEventListener('click', () => {
-    document.querySelector('#access-menu').setAttribute('hidden', '');
-    document.querySelector('#access-icon').removeAttribute('hidden');
+settings.addEventListener("keydown", (event) => {
+    let key = event.code;
+    if (key == "Escape") {
+        settings.removeAttribute("open");
+    }
 });
 
 document.querySelector('#access-cursor').addEventListener('click', () => {

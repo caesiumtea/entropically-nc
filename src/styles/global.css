@@ -505,7 +505,6 @@ blockquote {
     background-color: var(--color-bg-second);
     border: 2px solid var(--color-accent-2);
     border-radius: 0.5rem;
-    
 }
 
 #nav-toggle {
@@ -519,18 +518,15 @@ blockquote {
 	height:40px;
 	width:40px;
     background:var(--color-accent-1);
-}
-
-#nav-toggle::-webkit-details-marker {
-    display: none;
-}
-
-#nav-toggle::before {
     content: '';
 	mask-image:url(/img/burger.svg);
 	-webkit-mask-image:url(/img/burger.svg);
 	mask-size:40px;
 	-webkit-mask-size:40px;
+}
+
+#nav-toggle::-webkit-details-marker {
+    display: none;
 }
 
 #burger[open] > summary::before {
@@ -583,49 +579,70 @@ blockquote {
 
 
 
-/* accessibility menu */
-#access-icon {
-    background-color: var(--color-accent-1);
-    position: fixed;
-    right: 0;
+/* settings menu */
+#access {
+    position:fixed;
     top: 5px;
-    cursor: pointer;
-    border: solid 1px var(--color-accent-3);
-    border-right: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    width: fit-content;
-    height: fit-content;
-    z-index: 5;
+    right: 0px;
+    z-index:1000;
+    background-color: transparent;
 }
 
-#access-icon img {
-    width: 32px;
-    height: 32px;
-}
-
-#access-icon:focus {
-    background-color: var(--color-text-second);
-    border-color: var(--color-text-primary);
-}
-
-#access-menu {
-    background-color: var(--color-accent-1);
+#access[open] {
+	background-color: var(--color-accent-1);
     color: var(--color-bg-second);
     width: fit-content;
     padding: 1rem 2rem;
-    position: fixed;
-    right: 0;
-    top: 5px;
-    cursor: pointer;
-    border: solid 1px var(--color-accent-3);
+    border: solid 3px var(--color-accent-2);
     border-right: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     text-align: center;
     max-height: calc(100vh - 10px);
     overflow: auto;
-    z-index: 5;
+    z-index: 900;
+}
+
+#access-toggle {
+    list-style-type: none;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+}
+
+#access-toggle::before {
+    width: 38px;
+    height: 38px;
+    background-color:var(--color-accent-1);
+    background-image: url(/img/icons8-accessibility-64.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 32px;
+    content: '';
+    border: solid 2px var(--color-accent-2);
+    border-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+#access-toggle::-webkit-details-marker {
+    display: none;
+}
+
+#access[open] > summary {
+    display: block;
+    text-align: right;
+}
+
+#access[open] > summary::before {
+    content: 'close';
+    text-decoration: underline;
+    height: fit-content;
+    color: var(--color-bg-primary);
+    z-index: 1000;
+    background: none;
+    border: 0;
 }
 
 #access-menu h2 {
@@ -633,23 +650,11 @@ blockquote {
     font-family: var(--font-main);
     font-weight: bold;
     color: var(--color-bg-second);
+    margin-top: 0.5rem;
 }
 
 #access-menu a {
     color: var(--color-bg-primary);
-}
-
-#access-menu-close {
-    font-weight: bold;
-    width: fit-content;
-    position: absolute;
-    top: 0.5rem;
-    right: 3px;
-    z-index: 1;
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-second);
-    border: solid 1px var(--color-bg-primary);
-    border-radius: 15%;
 }
 
 .access-button {
