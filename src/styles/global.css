@@ -579,7 +579,7 @@ blockquote {
 }
 
 #access[open] {
-	background-color: var(--color-accent-1);
+	background-color: var(--color-bg-second);
     color: var(--color-bg-second);
     width: fit-content;
     padding: 1rem 2rem;
