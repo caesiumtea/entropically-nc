@@ -46,3 +46,10 @@ document.querySelector('#select-font').addEventListener('change', () => {
         document.documentElement.style.setProperty('--font-code', '"Iosevka Fixed", "Courier New", Courier, monospace');
     }
 });
+
+document.querySelector('#select-theme').addEventListener('change', () => {
+    const theme = document.querySelector('#select-theme').value;
+    window.localStorage.setItem('theme', theme);
+    const file = '/' + theme + '.css';
+    document.querySelector('#color-sheet').href = file;
+});

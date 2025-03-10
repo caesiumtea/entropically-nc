@@ -1,4 +1,13 @@
-let fontSetting = localStorage?.getItem("font") ?? "default";
+let themeSetting = localStorage?.getItem('theme') ?? 'moodysunset';
+if (!['moodysunset', 'monokai', 'monogruv-light', 'gruvbox-light']
+    .includes(themeSetting)) {
+        themeSetting = 'moodysunset';
+        window.localStorage.setItem('theme', 'moodysunset');
+}
+const file = '/' + themeSetting + '.css';
+document.querySelector('#color-sheet').href = file;
+
+let fontSetting = localStorage?.getItem('font') ?? 'default';
 if (fontSetting === "dyslexic") {
     document.documentElement.style.setProperty('--font-main', 'OpenDyslexic, Arial, Helvetica, sans-serif');
     document.documentElement.style.setProperty('--font-accent', 'OpenDyslexic, Arial, Helvetica, sans-serif');
