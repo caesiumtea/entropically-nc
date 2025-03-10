@@ -420,6 +420,7 @@ blockquote {
 
 
 
+
 /* navigation */
 
 /* shared - navbar and menu */
@@ -947,13 +948,9 @@ main.splash {
     }
 }
 
-
-/* @media screen and (min-width: 1200px) {
-    .toc {
-        position: fixed;
-        right: 0px;
-        top: 80px;
-        width: calc((100vw - 85ch) / 2);
-        font-size: 85%;
-    }
-} */
+@media (prefers-reduced-motion: no-preference) {
+    .zoom img:hover {
+        transform: scale(2);
+    } 
+  }
+  
