@@ -179,17 +179,29 @@ body {
     /* display: grid;
     grid-template-columns: 1fr 80ch 1fr; */
     position: relative;
+    list-style-image: url("/img/c16-icon-star_foollovers.gif");
 }
 
 #page-container {
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template:
+    "h"
+    "leftTop"
+    "content"
+    "leftBottom"
+    "right"
+    "f";
     min-height: 100vh;
+    gap: 0px;
+}
+
+header {
+    grid-area: h;
 }
 
 main {
-    flex: 1;
+    grid-area: content;
     margin: 1rem auto;
     padding: 1.5rem;
     padding-bottom: 3rem;
@@ -197,6 +209,46 @@ main {
     border: 5px solid var(--color-accent-2);
     /* border-right: 5px solid var(--color-accent-2); */
     background-color: var(--color-bg-primary);
+}
+
+#left-top-col {
+    grid-area: leftTop;
+}
+
+#left-bottom-col {
+    grid-area: leftBottom;
+}
+
+#right-col {
+    grid-area: right;
+}
+
+#left-top-col, #left-bottom-col, #right-col {
+    background-color: var(--color-bg-primary);
+    border: 2px dashed var(--color-accent-2);
+    margin: 1rem auto;
+    padding: 1rem;
+    height: fit-content;
+    width: 100%;
+    /* 10px is the border width of main */
+    max-width: min(80ch, calc(100vw - 10px));
+    text-align: center;
+
+}
+
+footer {
+    grid-area: f;
+    /* display: flex;
+    gap: 1rem; */
+    padding: 0rem 2rem;
+    background-color: var(--color-bg-second);
+    text-align: center;
+    border-top: solid 2px var(--color-accent-2);
+}
+
+footer a {
+    /* padding: 0.5rem 1rem; */
+    color: var(--color-text-second);
 }
 
 section {
@@ -224,6 +276,7 @@ h2 {
 h3 {
     font-size: 1.7rem;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 a {
@@ -239,22 +292,16 @@ p {
     margin: 1.5rem 0;
 }
 
+li p {
+    margin: 0;
+}
+
+li img {
+    display: inline;
+}
+
 em, strong {
     color: var(--color-accent-1);
-}
-
-footer {
-    /* display: flex;
-    gap: 1rem; */
-    padding: 0rem 2rem;
-    background-color: var(--color-bg-second);
-    text-align: center;
-    border-top: solid 2px var(--color-accent-2);
-}
-
-footer a {
-    /* padding: 0.5rem 1rem; */
-    color: var(--color-text-second);
 }
 
 code {
@@ -300,10 +347,6 @@ blockquote {
     margin-left: 2rem;
 }
 
-li img {
-    display: inline;
-}
-
 .buttons {
     display: flex;
     flex-flow: row wrap;
@@ -316,8 +359,14 @@ li img {
     font-family: var(--font-code);
 }
 
+/* utility classes */
+
 .small-text {
     font-size: 75%;
+}
+
+.large-text {
+    font-size: 150%;
 }
 
 .large-accent-text {
@@ -377,10 +426,11 @@ li img {
 
 .nav-links {
     color: var(--color-text-second);
-    font-size: 180%;
-    font-weight: 600;
+    font-size: 150%;
+    font-weight: 500;
     font-family: var(--font-accent);
-    list-style-type: none;
+    list-style: none;
+    line-height: 1.2;
 }
 
 .nav-links > li {
@@ -392,9 +442,28 @@ li img {
 }
 
 .nav-links ul {
-    list-style-type: none;
-    font-weight: 500;
+    list-style: none;
+    font-weight: 400;
     font-size: 80%;
+    padding: 0;
+}
+
+.nav-links summary {
+    width: fit-content;
+    list-style-position: outside;
+}
+
+.nav-links details {
+    display: inline-block;
+    text-align: start;
+}
+
+/* sidebar */
+.nav-sidebar-header {
+    color: var(--color-text-second);
+    font-size: 150%;
+    font-weight: 500;
+    font-family: var(--font-accent);
 }
 
 /* navbar (desktop) */
@@ -527,6 +596,7 @@ li img {
     border-bottom-left-radius: 5px;
     width: fit-content;
     height: fit-content;
+    z-index: 5;
 }
 
 #access-icon img {
@@ -555,6 +625,7 @@ li img {
     text-align: center;
     max-height: calc(100vh - 10px);
     overflow: auto;
+    z-index: 5;
 }
 
 #access-menu h2 {
@@ -611,12 +682,17 @@ body.splash {
 
 main.splash {
     border: 0;
+    background-color: transparent;
 }
 
 #splash-title {
     font-size: min(450%, 14vi);
     text-align: center;
     margin-top: 3rem;
+}
+
+.buttons.splash {
+    gap: 8px;
 }
 
 
@@ -634,17 +710,52 @@ main.splash {
     margin: auto;
 }
 
-#linkback-button div {
-    width: 36ch;
-}
-
-#changelog-box {
-    height: 16ch;
+.changelog-box {
+    height: 30ch;
     overflow: auto;
+    text-align: start;
 }
 
-#changelog-box ul {
+.changelog-box ul {
     padding-left: 1rem;
+}
+
+.sidebar {
+    margin: 0.5rem 0;
+}
+
+.sidebar img {
+    margin: auto;
+}
+
+#statuscafe {
+    padding: .5em;
+    border: 1px solid var(--color-accent-2);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
+/* about me */
+
+.blinkies img {
+    width: 150px;
+    height: 20px;
+}
+
+/* changelog full */
+
+.changelog li {
+    padding: 0.4rem;
+}
+
+.changelog li:nth-of-type(2n) {
+    background-color: var(--color-bg-fourth);
 }
 
 /* tags */
@@ -664,15 +775,22 @@ main.splash {
 
 /* post's */
 
+.post {
+    margin-bottom: 2rem;
+}
+
 .post-hero {
     background-color: var(--color-bg-second);
     padding: 1rem;
-    margin-bottom: 2.5rem;
+    margin: 0 auto 2.5rem;
+    width: fit-content;
     max-width: calc(100vw - 2rem);
 }
 
 .post-hero img {
     margin: 0.5rem auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .post-hero figcaption {
@@ -682,6 +800,29 @@ main.splash {
 
 .post p {
     text-indent: 4ch;
+}
+
+.post p:first-of-type {
+    text-indent: 0;
+}
+
+.toc {
+    margin-bottom: 2rem;
+    width: fit-content;
+    margin-left: 0;
+}
+
+.toc h2 {
+    margin-top: 0;
+}
+
+.toc ul {
+    padding-left: 1rem;
+}
+
+.sidebar .toc {
+    width: 100%;
+    text-align: start;
 }
 
 .license-box {
@@ -704,11 +845,14 @@ main.splash {
 
 
 
+
+
 /* desktop styles */
 
 @media screen and (min-width: 600px) {
     main {
-        width: 80ch;
+        max-width: 80ch;
+        min-width: 70ch;
     }
 
     #navbar {
@@ -723,4 +867,88 @@ main.splash {
         display: none;
     }
 
+    #linkback-button {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #linkback-button div {
+        max-width: 36ch;
+    }
+
 }
+
+/* activate 3 col layout only above this width */
+@media screen and (min-width: 150ch) {
+    #page-container {
+        grid-template:
+            "h h h" auto
+            "leftTop content right" auto
+            "leftBottom content right" 1fr
+            "f f f" auto
+            / 1fr 80ch 1fr;
+        align-content: start;
+        position: relative;
+    }
+    
+    #left-top-col, #left-bottom-col, #right-col {
+        margin: 1rem;
+        width: unset;
+        text-align: start;
+    }
+
+    #left-top-col {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #left-bottom-col {
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #right-col {
+        position: sticky;
+        top: 1rem;
+    }
+
+    .nav-sidebar ul {
+        padding: 0;
+    }
+
+    .nav-sidebar-header {
+        list-style-position: inside;
+    }
+
+    .sidebar h2 {
+        font-size: 1.5rem;
+    }
+
+    .changelog-box.sidebar {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .sidebar.buttons {
+        flex-direction: column;
+    }
+
+    .sidebar .toc {
+        font-size: 85%;
+        width: 100%;
+    }
+}
+
+
+/* @media screen and (min-width: 1200px) {
+    .toc {
+        position: fixed;
+        right: 0px;
+        top: 80px;
+        width: calc((100vw - 85ch) / 2);
+        font-size: 85%;
+    }
+} */

@@ -1,8 +1,13 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { DateTime } from "luxon";
+import ToC from '../components/ToC.astro';
+import { Image } from 'astro:assets';
+import Navigation from "../components/Navigation.astro";
+import Log from "../content/changelog.md";
 
-const { frontmatter } = Astro.props;
+
+const { frontmatter, headings } = Astro.props;
 const luxonPub = DateTime.fromJSDate(frontmatter.pubDate, { zone: "utc" });
 
 let edited;
@@ -17,17 +22,22 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+    <nav class="nav-sidebar" slot="left-top">
+        <details>
+            <summary class="nav-sidebar-header">navigation</summary>
+            <Navigation />
+        </details>
+    </nav>
+    <article>
     <p class="published">
         published {luxonPub.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
         { edited && ` | updated ${luxonEdit.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}`}
     </p>
-    
-
+    { headings.length > 0 && <ToC headings={headings} />}
     <figure class="post-hero">
-        <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-        <figcaption set:html={frontmatter.image.caption} />
+        <Image src={frontmatter.image.url} alt={frontmatter.image.alt} />
+        {frontmatter.image.caption && <figcaption set:html={frontmatter.image.caption} />}
     </figure>
-
     <div class="post">
         <slot />
     </div>
@@ -41,4 +51,18 @@ if (frontmatter.editDate.getTime() !== frontmatter.pubDate.getTime()) {
             ))
         }
     </div>
+</article>
+<a slot="left-bottom" href="/guestbook"
+        ><img
+            src="/img/buttons/signguest.gif"
+            alt="Sign my guestbook"
+            class="sidebar"
+        /></a>
+    <h2 class="sidebar" slot="left-bottom">changelog</h2>
+    <div class="changelog-box sidebar box" slot="left-bottom">
+        <Log />
+    </div>
+    <a href="/changelog" slot="left-bottom">(full view)</a>
+    {headings.length > 0 && <ToC slot="right" headings={headings} />}
+    <p slot="right"><a class="to-top" href="#">return to top of page</a></p>
 </BaseLayout>

@@ -1,4 +1,7 @@
-- 2025-03-04: small styling updates; background image on page margins; pixel font no longer has an increased size
+- 2025-03-09: after a couple days of working on it, finally added a column layout! also decorated with some 88x31 buttons! and this changelog gets its own page.
+- 2025-03-06: new blog post, [cool things i found this month](/blog/cool-things-2025-02/), AND a new-old guide, [HTML + CSS vocabulary](/learn/vocabulary/)!
+- 2025-03-05: added auto-generated table of contents to tutorials
+- 2025-03-04: updated [freezeframe post](/learn/freezeframe); added ff.css to fix freezeframe-based styles; added background image on page margins for main site; pixel font no longer has an increased size; other small styling changes
 - 2025-03-03: added the first "learn" post, about [how to pause gifs](/learn/freezeframe) and how to troubleshoot freezeframe.js! 
 - 2025-03-02: added a splash page and this changelog, and set up freezeframe.js for gif pausing
 - 2025-03-01: split "about" into [about me](/aboutme) and [about site](/site), added jasper's bio to about me, added license info to about site, moved credits to about site

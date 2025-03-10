@@ -16,10 +16,19 @@ const { pageTitle } = Astro.props;
         <AccessMenu />
         <div id="page-container">
             <Header />
-            <main>
+            <aside id="left-top-col" class="sidebar">
+                <slot name="left-top" />
+            </aside>
+            <aside id="left-bottom-col" class="sidebar">
+                <slot name="left-bottom" />
+            </aside>
+            <main id="main">
                 <h1>{pageTitle}</h1>
                 <slot />
             </main>
+            <aside id="right-col" class="sidebar">
+                <slot name="right" />
+            </aside>
             <Footer />
         </div>
         <script>

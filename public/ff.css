@@ -1,0 +1,9 @@
+.freezeframe, .ff-image {
+    vertical-align: unset;
+    margin: unset;
+}
+
+.centered {
+    text-align: center;
+    margin: auto;
+}

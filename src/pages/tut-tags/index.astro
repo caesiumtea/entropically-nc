@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogMetaLayout from "../../layouts/BlogMetaLayout.astro";
 
 const pageTitle = "tutorial tags index";
 const allPosts = await getCollection("tuts");
@@ -10,7 +10,7 @@ const tags = [
 ];
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BlogMetaLayout pageTitle={pageTitle}>
     <div class="tags">
         {
             tags.map((tag) => (
@@ -20,4 +20,4 @@ const tags = [
             ))
         }
     </div>
-</BaseLayout>
+</BlogMetaLayout>

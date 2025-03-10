@@ -1,19 +1,34 @@
 ---
-import { getCollection, render } from "astro:content";
+// ToC code source: https://noahflk.com/blog/astro-table-of-contents
+import { CollectionEntry, getCollection, render } from "astro:content";
 import TutorialLayout from "../../layouts/TutorialLayout.astro";
+import type { MarkdownHeading } from 'astro';
 
 export async function getStaticPaths() {
     const posts = await getCollection("tuts");
-    return posts.map((post) => ({
+
+    const headings = await Promise.all(
+        posts.map(async (post) => {
+            const data = await render(post);
+            return data.headings;
+        }),
+    );
+
+    return posts.map((post, index) => ({
         params: { slug: post.id },
-        props: { post },
+        props: { post, headings: headings[index] },
     }));
 }
 
-const { post } = Astro.props;
+type Props = {
+  post: CollectionEntry<'tuts'>;
+  headings: MarkdownHeading[];
+};
+
+const { post, headings } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<TutorialLayout frontmatter={post.data}>
+<TutorialLayout frontmatter={post.data} headings={headings}>
     <Content />
 </TutorialLayout>
