@@ -20,10 +20,11 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
   - breadcrumbs
 - find a pixel font with tighter spacing tbh
 - make tags index into a component instead of duplicating code on blog and tags pages
-- convert images to Astro Image component
+- convert images to Astro Image component, esp splash page
 - custom scrollbars for e.g. changelog
 - replace the svg masking on the hamburger menu with something more performant
   - or just ditch the hamburger menu and have nav in the "sidebar" only?
+- convert status.cafe widget to feed
 
 ## license
 the license for the **code** of this site is the Hippocratic License, an *almost* open license that says you can do basically anything you want with this code as long as it doesn't hurt people. check out [LICENSE.md](LICENSE.md) as well as the [Hippocratic License website](https://firstdonoharm.dev/). by the way, i really do want you to go ahead and take my code and tinker with it!
