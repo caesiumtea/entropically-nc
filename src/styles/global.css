@@ -285,6 +285,10 @@ li p {
     margin: 0;
 }
 
+details p {
+    margin: 1rem 0;
+}
+
 li img {
     display: inline;
 }
@@ -580,7 +584,7 @@ blockquote {
 
 #access[open] {
 	background-color: var(--color-bg-second);
-    color: var(--color-bg-second);
+    color: var(--color-text-primary);
     width: fit-content;
     padding: 1rem 2rem;
     border: solid 3px var(--color-accent-2);
@@ -629,7 +633,7 @@ blockquote {
     content: 'close';
     text-decoration: underline;
     height: fit-content;
-    color: var(--color-bg-primary);
+    color: var(--color-text-primary);
     z-index: 1000;
     background: none;
     border: 0;
@@ -639,18 +643,18 @@ blockquote {
     font-size: 1rem;
     font-family: var(--font-main);
     font-weight: bold;
-    color: var(--color-bg-second);
+    color: var(--color-text-second);
     margin-top: 0.5rem;
 }
 
 #access-menu a {
-    color: var(--color-bg-primary);
+    color: var(--color-text-second);
 }
 
 .access-button {
     display: block;
     background-color: transparent;
-    color: var(--color-bg-primary);
+    color: var(--color-text-second);
     text-decoration: underline;
     cursor: pointer;
     border: 0;
