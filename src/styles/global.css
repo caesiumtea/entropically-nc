@@ -152,17 +152,6 @@ textarea:not([rows]) {
 
 /* variables */
 :root {
-    --color-bg-primary: #331D41; /* dark purple */
-    --color-bg-second: #003f5c; /* dark blue */
-    --color-bg-third: #00202e; /* darkest blue */
-    --color-bg-fourth: #002D42; /* mediumly dark blue */
-    --color-text-primary: #ffb9a3; /* light coral */
-    --color-text-second: #ff6361; /* coral */
-    --color-text-third: #D68FBA; /* light mauve */
-    --color-accent-1: #ffa600; /* gold */
-    --color-accent-2: #bc5090; /* pink mauve */
-    --color-accent-3: #8a508f; /* dark mauve */
-    --color-accent-4: #58508d; /* purple */
     --font-main: Iosevka, Verdana, Geneva, Tahoma, sans-serif;
     --font-accent: Eczar, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --font-code: 'Iosevka Fixed', 'Courier New', Courier, monospace;
@@ -174,7 +163,7 @@ textarea:not([rows]) {
 body {
     font-family: var(--font-main);
     background-color: var(--color-bg-primary);
-    background-image: url("/img/SpaceBackground17.png");
+    background: var(--bg);
     color: var(--color-text-primary);
     /* display: grid;
     grid-template-columns: 1fr 80ch 1fr; */
