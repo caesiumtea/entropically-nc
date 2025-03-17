@@ -1,12 +1,4 @@
-let burger = document.getElementById("burger");
 let settings = document.getElementById("access");
-
-burger.addEventListener("keydown", (event) => {
-    let key = event.code;
-    if (key == "Escape") {
-        burger.removeAttribute("open");
-    }
-});
 
 settings.addEventListener("keydown", (event) => {
     let key = event.code;
