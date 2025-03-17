@@ -3,12 +3,12 @@
     --color-bg-second: #1e1f1c; /* should be lighter but is darker(est) */
     --color-bg-third: #1e1f1c; /* darkest */
     --color-bg-fourth: #1e1f1c; /* darkest (repeat) */
-    --color-text-primary: #e2e22e; /* yellow */
+    --color-text-primary: #E0D561; /* yellow */
     --color-text-second: #f92672; /* hot pink */
     --color-text-third: #a6e22e; /* lime green */
     --color-accent-1: #66d9ef; /* cyan */
     --color-accent-2: #ae81ff; /* light purple */
     --color-accent-3: #785ea8; /* darker purple */
     --color-accent-4: #4f99a7; /* darker cyan */
-    --bg: #1e1f1c;
+    --bg: url("/img/bg/flowerzdark.png");
 }

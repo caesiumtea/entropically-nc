@@ -10,5 +10,5 @@
     --color-accent-2: #458588; /*  */
     --color-accent-3: #427B58; /*  */
     --color-accent-4: #D79921; /*  */
-    --bg: #cccccc;
+    --bg: url("/img/bg/ppl-roses.png");
 }
