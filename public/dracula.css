@@ -10,5 +10,5 @@
     --color-accent-2: #f1fa8c; /*  */
     --color-accent-3: #50fa7b; /*  */
     --color-accent-4: #ffb86c; /*  */
-    --bg: #282a36;
+    --bg:url("/img/bg/flowersblue.png");
 }
