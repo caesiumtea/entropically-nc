@@ -1,7 +1,17 @@
 {
-  "name": "astroblog",
+  "name": "entropically",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": "caesiumtea",
+  "description": "silly personal site",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caesiumtea/entropically-nc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caesiumtea/entropically-nc/issues"
+  },
+  "homepage": "https://entropically.neocities.org/",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
