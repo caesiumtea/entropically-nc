@@ -70,7 +70,9 @@ textarea:not([rows]) {
 
 /* end CSS reset */
 
-/* fonts */
+
+
+/* import fonts */
 
 /* font url from this codepen: https://codepen.io/cornetespoir/pen/ppBLQa */
 @font-face {
@@ -150,6 +152,10 @@ textarea:not([rows]) {
     src: url("/fonts/monogram-extended-italic.ttf") format("truetype");
 }
 
+/* end fonts */
+
+
+
 /* variables */
 :root {
     --font-main: Iosevka, Verdana, Geneva, Tahoma, sans-serif;
@@ -159,6 +165,9 @@ textarea:not([rows]) {
     --closeicon:url(/img/close.svg); /* Path to close vector */
 }
 
+
+
+/* main styles */
 
 body {
     font-family: var(--font-main);
