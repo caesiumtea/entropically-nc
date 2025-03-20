@@ -1,0 +1,8 @@
+---
+const { warning } = Astro.props;
+---
+<aside class="box warning-box">
+    <img src="/img/warning.svg" alt="warning sign" height="100px" /><p>
+        <strong>Content warning:</strong> <slot />
+    </p>
+</aside>

@@ -1,0 +1,11 @@
+---
+const { data } = Astro.props;
+---
+<table class="oc-table">
+    {data.map(({ label, text }) => (
+        <tr>
+            <th scope="row">{label}</th>
+            <td>{text}</td>
+        </tr>
+    ))}
+</table>

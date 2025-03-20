@@ -838,7 +838,7 @@ main.splash {
     text-align: start;
 }
 
-.license-box {
+.license-box, .warning-box {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -850,11 +850,42 @@ main.splash {
     height: auto;
 }
 
-.license-box p {
+.license-box p, .warning-box p {
     text-indent: 0;
     margin: 0;
 }
 
+.warning-box img {
+    height: 100px;
+    width: auto;
+}
+
+/* OC pages */
+
+table {
+    background-color: var(--color-bg-second);
+    border-collapse: collapse;
+}
+
+table th, td {
+    border: 2px solid var(--color-accent-2);
+}
+
+.oc-table th {
+    text-align: right;
+    padding-right: 1rem;
+    font-weight: bold;
+    color: var(--color-accent-1);
+}
+
+.oc-table td {
+    text-align: left;
+    padding-left: 0.7rem;
+}
+
+table tr:nth-of-type(2n) {
+    background-color: var(--color-bg-fourth);
+}
 
 
 
