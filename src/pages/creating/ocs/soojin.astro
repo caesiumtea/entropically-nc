@@ -1,0 +1,14 @@
+---
+import Warning from "../../../components/Warning.astro";
+import FictionLayout from "../../../layouts/FictionLayout.astro";
+import Bio from "../../../content/ocs/soojin.md";
+import data from "../../../content/ocs/soojin.json";
+import OCTable from "../../../components/OCTable.astro";
+
+const pageTitle = "soo jin takeda 🍎";
+---
+<FictionLayout pageTitle={pageTitle}>
+    <h2>the sinnamon roll</h2>
+    <OCTable data={data} />
+    <Bio />
+</FictionLayout>

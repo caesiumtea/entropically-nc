@@ -865,10 +865,11 @@ main.splash {
 table {
     background-color: var(--color-bg-second);
     border-collapse: collapse;
+    border: 2px solid var(--color-accent-3);
+
 }
 
 table th, td {
-    border: 2px solid var(--color-accent-2);
 }
 
 .oc-table th {
@@ -876,6 +877,7 @@ table th, td {
     padding-right: 1rem;
     font-weight: bold;
     color: var(--color-accent-1);
+    border-right: 2px solid var(--color-accent-3);
 }
 
 .oc-table td {
