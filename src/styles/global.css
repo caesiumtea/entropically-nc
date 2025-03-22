@@ -712,6 +712,13 @@ main.splash {
 
 /* home page */
 
+.webrings {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 #linkback-button {
     display: flex;
     flex-direction: column;
