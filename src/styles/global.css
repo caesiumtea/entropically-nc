@@ -717,6 +717,7 @@ main.splash {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    gap: 0.8rem;
 }
 
 #linkback-button {
