@@ -411,6 +411,12 @@ blockquote {
     display: none !important;
 }
 
+.spoiler {
+    color: transparent;
+    background-color: var(--color-bg-third);
+    border-radius: 0.3rem;
+}
+
 /* source: https://webaim.org/techniques/css/invisiblecontent/ */
 .sr-only {
     position:absolute;

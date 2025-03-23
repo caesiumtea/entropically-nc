@@ -12,10 +12,10 @@ Soo Jin grew up upper middle class, with zir mom and dad, two older brothers, an
 
 ### age 15 vs. age 25
 <details>
-<summary><strong>warning:</strong> contains mentions of mature topics/not safe for work</summary>
+<summary><strong>warning:</strong> contains mentions of mature/not-safe-for-work topics (highlight text to reveal)</summary>
 <p>
-<strong>age 15:</strong> hoodies, stifled existentialism and identity crisis, detached and escapist but tries to be soft and uwu and approachable, bad at boundaries, draws porn but thinks sex is probably not a real thing</p>
+<strong>age 15:</strong> hoodies, stifled existentialism and identity crisis, detached and escapist but tries to be soft and uwu and approachable, bad at boundaries, <span class="spoiler">draws porn but thinks sex is probably not a real thing</span></p>
 <p>
-<strong>age 25:</strong> sweaters and fluffy skirts, its gonna be ok, loud angry queer, still a big nerd, thinking about kink stuff 95% of the time (has approximately 74686326 kinks), everybody's confidant, thoroughly unrepentant, still draws silly caricatures and porn but also horror, has many nuanced opinions on what sex is and its relative fakeness and ways people relate to it, unfazeable
+<strong>age 25:</strong> sweaters and fluffy skirts, its gonna be ok, loud angry queer, still a big nerd, <span class="spoiler">thinking about kink stuff 95% of the time (has approximately 74686326 kinks)</span>, everybody's confidant, thoroughly unrepentant, still draws silly caricatures <span class="spoiler">and porn</span> but also horror, has many nuanced opinions on what sex is and its relative fakeness and ways people relate to it, unfazeable
 </p>
 </details>
