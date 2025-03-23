@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import AccessMenu from "../components/AccessMenu.astro";
 import BurgerMenu from "../components/BurgerMenu.astro";
+import Comments from "../components/Comments.astro";
 
 const { pageTitle } = Astro.props;
 ---
@@ -25,6 +26,7 @@ const { pageTitle } = Astro.props;
             <main id="main">
                 <h1>{pageTitle}</h1>
                 <slot />
+                <Comments />
             </main>
             <aside id="right-col" class="sidebar">
                 <slot name="right" />
