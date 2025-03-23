@@ -9,7 +9,6 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - make the right sidebar sticky ONLY when it holds table of contents
 - stop having two duplicate navs, figure out which ur gonna use
 - sitemap - maybe not strictly needed just yet, but probably soon
-- add comment widget - probably [giscus](https://giscus.app/)? or ayano's?
 - fix cursor effect causing page to stretch beyond edges x_x (this will be hard... advice encouraged lol)
 - make cute layout graphics (wanna try out image borders!)
 - write tutorial about how i made my accessibility menu (toggling fonts and scripts)
@@ -17,7 +16,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 - animate settings menu sliding in and out???
 - virtual sticker book (inspired by pastelhello.com)
 - make submenus or otherwise improve nav/add more pages to nav
-  - breadcrumbs
+  - breadcrumbs, esp for OC pages
 - find a pixel font with tighter spacing tbh
 - make tags index into a component instead of duplicating code on blog and tags pages
 - convert images to Astro Image component, esp splash page

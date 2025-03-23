@@ -1,3 +1,4 @@
+- 2025-03-22: added giscus comment widget to all pages! working on OC pages; first two now available.
 - 2025-03-16: took a much needed break this week! then came back and posted a [great big blog](/blog/2025-03-16-from-scratch/) replying to some other blog! also, shuffled around the OC page and made a general ["creating"](/creating) page. tweaked color themes and added background images to a few more.
 - 2025-03-10: created [OCs](/creating/ocs) page, still WIP
 - 2025-03-09: BIG DAY. after a couple days of working on it, finally added a column layout! also decorated with some 88x31 buttons! and this changelog gets its own page. also, added a theme switcher to the settings menu, and the menu is now a details element so that it doesn't need javascript!
