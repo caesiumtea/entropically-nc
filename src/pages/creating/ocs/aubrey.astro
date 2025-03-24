@@ -1,0 +1,15 @@
+---
+import Warning from "../../../components/Warning.astro";
+import FictionLayout from "../../../layouts/FictionLayout.astro";
+import Bio from "../../../content/ocs/aubrey.md";
+import data from "../../../content/ocs/aubrey.json";
+import OCTable from "../../../components/OCTable.astro";
+
+const pageTitle = "aubrey garnier 💄";
+---
+<FictionLayout pageTitle={pageTitle}>
+    <h2>the femboy before femboys were cool</h2>
+    <Warning>This page contains references to self-harm and suicidal ideation.</Warning>
+    <OCTable data={data} />
+    <Bio />
+</FictionLayout>

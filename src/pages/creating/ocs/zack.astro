@@ -1,0 +1,14 @@
+---
+import Warning from "../../../components/Warning.astro";
+import FictionLayout from "../../../layouts/FictionLayout.astro";
+import Bio from "../../../content/ocs/zack.md";
+import data from "../../../content/ocs/zack.json";
+import OCTable from "../../../components/OCTable.astro";
+
+const pageTitle = "zack levy 🧵";
+---
+<FictionLayout pageTitle={pageTitle}>
+    <h2>the sleepy nerd</h2>
+    <OCTable data={data} />
+    <Bio />
+</FictionLayout>
