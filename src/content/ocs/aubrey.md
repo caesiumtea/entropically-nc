@@ -9,6 +9,6 @@ Identifies as a guy for sure but also identifies as a femme and does experience 
 Loves cute things. Writes fanfic. Has lots of feelings about music and webcomics. Uncommonly, both chronically online *and* a 365 party boy.
 
 ### age 15 vs. age 25
-**age 15:** dumb teen and silly scene kid, ~kawaii uwu~, nothing matters and he's indestructible, happy go lucky with an edge of chuuni sarcasm, vain, bright bright colors, 4chan and fanfiction.net
+**age 15:** dumb teen and silly scene kid, ~ kawaii uwu ~, nothing matters and he's indestructible, happy go lucky with an edge of chuuni sarcasm, vain, bright bright colors, 4chan and fanfiction.net
 
 **age 25:** starting to take life a little more seriously (but not too seriously), subtler makeup, Cool Fashion, still a giant dork but covers it up more, gin instead of cheap rum, still lives for cute shit, better at filling his life with good people
