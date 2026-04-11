@@ -1,5 +1,5 @@
 export function runSketch() {
-    const canvas = document.getElementById('gen1');
+    const canvas = document.getElementById('speckle1');
 
     const ctx = canvas.getContext('2d');
 
