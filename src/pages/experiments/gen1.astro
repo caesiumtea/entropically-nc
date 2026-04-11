@@ -1,35 +1,26 @@
 ---
 import SiteButtons from "../../components/SiteButtons.astro";
 import HomeLayout from "../../layouts/HomeLayout.astro";
-const pageTitle = "first generative art experiment";
+const pageTitle = "speckle machine";
 ---
 
 <HomeLayout pageTitle={pageTitle}>
 
-    <canvas id="gen1" width="400" height="400" style="background-color: white;"></canvas>
+    <canvas id="gen1" width="400" height="400"></canvas>
     <script>
         import { runSketch } from "../../scripts/gen1.js";
         runSketch();
     </script>
-    <!-- <script>
-        const canvas = document.getElementById('gen1');
-
-    const ctx = canvas.getContext('2d');
-
-    for (let i = 0; i < 10; i++) {
-        const radius = 10 + Math.floor(Math.random() * 16)
-        const x = Math.floor(Math.random() * 400)
-        const y = Math.floor(Math.random() * 400)
-        const color_r = 156 + Math.floor(Math.random() * 100)
-        const color_g = 156 + Math.floor(Math.random() * 100)
-        const color_b = 156 + Math.floor(Math.random() * 100)
-        
-        ctx.fillStyle = "rgb(color_r color_g color_b / 20%)"
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, 2 * Math.PI);
-        ctx.fill();
-        
-    }
-    </script> -->
+    <p>
+        this is my very first experiment with generative art! it's extremely simple: it picks a random color, radius, and x/y position, then makes a circle, and does that 50 times. 
+    </p>
+    <h3>to try later:</h3>
+    <ul>
+        <li>make the canvas resize to match the screen or parent element</li>
+        <li>use a generated color palette instead of fully random colors: one random seed color then calculate matching colors and randomly select from that color list</li>
+        <li>some random variation in the path shape</li>
+        <li>arrange speckles in some kind of pattern</li>
+        <li>make interactive buttons or sliders for those options</li>
+    </ul>
 
 </HomeLayout>
