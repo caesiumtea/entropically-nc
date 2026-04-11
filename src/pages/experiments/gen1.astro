@@ -7,10 +7,30 @@ const pageTitle = "first generative art experiment";
 <HomeLayout pageTitle={pageTitle}>
 
     <h2>{pageTitle}</h2>
-    <canvas id="gen1" width="400" height="400"></canvas>
-    <script type="module">
+    <canvas id="gen1" width="400" height="400" style="background-color: white;"></canvas>
+    <script>
         import { runSketch } from "../../scripts/gen1.js";
         runSketch();
     </script>
+    <!-- <script>
+        const canvas = document.getElementById('gen1');
+
+    const ctx = canvas.getContext('2d');
+
+    for (let i = 0; i < 10; i++) {
+        const radius = 10 + Math.floor(Math.random() * 16)
+        const x = Math.floor(Math.random() * 400)
+        const y = Math.floor(Math.random() * 400)
+        const color_r = 156 + Math.floor(Math.random() * 100)
+        const color_g = 156 + Math.floor(Math.random() * 100)
+        const color_b = 156 + Math.floor(Math.random() * 100)
+        
+        ctx.fillStyle = "rgb(color_r color_g color_b / 20%)"
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, 2 * Math.PI);
+        ctx.fill();
+        
+    }
+    </script> -->
 
 </HomeLayout>
