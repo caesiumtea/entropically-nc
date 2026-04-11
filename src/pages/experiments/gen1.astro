@@ -7,7 +7,10 @@ const pageTitle = "first generative art experiment";
 <HomeLayout pageTitle={pageTitle}>
 
     <h2>{pageTitle}</h2>
-    <canvas id="gen1"></canvas>
-    <script src="../../scripts/gen1.js" defer></script>
+    <canvas id="gen1" width="100%" height="100vh"></canvas>
+    <script type="module">
+        import { runSketch } from "../../scripts/gen1.js";
+        runSketch();
+    </script>
 
 </HomeLayout>
