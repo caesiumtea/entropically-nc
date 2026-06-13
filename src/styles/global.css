@@ -275,6 +275,8 @@ h3 {
     font-size: 1.7rem;
     margin-bottom: 0.5rem;
     margin-top: 1rem;
+    color: var(--color-accent-1);
+
 }
 
 h4 {
@@ -307,8 +309,12 @@ li img {
     display: inline;
 }
 
-em, strong {
+strong {
     color: var(--color-accent-1);
+}
+
+em {
+    color: var(--color-text-second);
 }
 
 code {
