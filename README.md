@@ -7,6 +7,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 ## to do
 - [x] fixed "return to top" icon in bottom right
   - add a setting to hide it
+- make an astro component for image+caption figures in blogs
 - make the right sidebar sticky ONLY when it holds table of contents
 - stop having two duplicate navs, figure out which ur gonna use
 - sitemap - maybe not strictly needed just yet, but probably soon
