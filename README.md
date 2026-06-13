@@ -27,6 +27,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
   - or just ditch the hamburger menu and have nav in the "sidebar" only?
 - convert status.cafe widget to feed
 - webgarden: greenhouse and also make my own pot or whatever its called
+- write some JS on your about page to calculate your age so it's always up to date
 
 ## reminder to self
 - tab index: "skip to content" is 1, settings menu is 2, "return to top" is 3
