@@ -35,6 +35,6 @@ any **prose (including blog posts) and visual art** on this site are *proprietar
 [ways to contact me](https://caesium.carrd.co/) (until i get comments set up on the site itself!) - would love to hear from folks with any feedback!
 
 ## acknowledgements
-please see the [credits page](https://entropically.neocities.org/credits) on the live site for acknowledgements of resources used in creating this site!
+please see the [credits page](https://entropically.neocities.org/site/#credits) on the live site for acknowledgements of resources used in creating this site!
 
 ![hosted on neocities](public/img/neocities.png)
