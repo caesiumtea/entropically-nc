@@ -30,6 +30,7 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
 
 ## reminder to self
 - tab index: "skip to content" is 1, settings menu is 2, "return to top" is 3
+- added mdx integration to astro on 6/13
 
 ## license
 the license for the **code** of this site is the Hippocratic License, an *almost* open license that says you can do basically anything you want with this code as long as it doesn't hurt people. check out [LICENSE.md](LICENSE.md) as well as the [Hippocratic License website](https://firstdonoharm.dev/). by the way, i really do want you to go ahead and take my code and tinker with it!
