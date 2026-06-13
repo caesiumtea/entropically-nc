@@ -824,7 +824,7 @@ main.splash {
     margin-bottom: 2rem;
 }
 
-.post-hero {
+.post-hero, .post-image {
     background-color: var(--color-bg-second);
     padding: 1rem;
     margin: 0 auto 2.5rem;
@@ -832,13 +832,13 @@ main.splash {
     max-width: calc(100vw - 2rem);
 }
 
-.post-hero img {
+.post-hero img, .post-image img {
     margin: 0.5rem auto;
     max-width: 100%;
     height: auto;
 }
 
-.post-hero figcaption {
+.post-hero figcaption, .post-image figcaption {
     font-size: 85%;
     color: var(--color-accent-1);
 }
