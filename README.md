@@ -5,7 +5,8 @@ this is the code for my blog on [neocities](https://entropically.neocities.org/)
 made with [Astro](https://astro.build/)! it's my first time using astro, please give me advice lol
 
 ## to do
-- fixed "return to top" icon in bottom right
+- [x] fixed "return to top" icon in bottom right
+  - add a setting to hide it
 - make the right sidebar sticky ONLY when it holds table of contents
 - stop having two duplicate navs, figure out which ur gonna use
 - sitemap - maybe not strictly needed just yet, but probably soon
@@ -25,6 +26,9 @@ made with [Astro](https://astro.build/)! it's my first time using astro, please 
   - or just ditch the hamburger menu and have nav in the "sidebar" only?
 - convert status.cafe widget to feed
 - webgarden: greenhouse and also make my own pot or whatever its called
+
+## reminder to self
+- tab index: "skip to content" is 1, settings menu is 2, "return to top" is 3
 
 ## license
 the license for the **code** of this site is the Hippocratic License, an *almost* open license that says you can do basically anything you want with this code as long as it doesn't hurt people. check out [LICENSE.md](LICENSE.md) as well as the [Hippocratic License website](https://firstdonoharm.dev/). by the way, i really do want you to go ahead and take my code and tinker with it!
