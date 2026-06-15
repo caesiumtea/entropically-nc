@@ -2,6 +2,8 @@
 import HomeLayout from "../layouts/HomeLayout.astro";
 
 const pageTitle = "about me";
+
+
 ---
 
 <HomeLayout pageTitle={pageTitle}>
@@ -16,13 +18,9 @@ const pageTitle = "about me";
         <ul>
             <li>other names i go by include vae, entropy, and caesiumtea</li>
             <li>
-                34 y/o, transmasc non-binary, queer af, neurodivergent,
+                <span id="current-age">34</span> y/o, transmasc non-binary, queer af, neurodivergent,
                 disabled, plural, anticapitalist
             </li>
-            <ul>
-                <li>in case i go a year without updating this again, FYI my birth date is sep 2 1991, so have fun calculating my age on your own lol</li>
-                <li>if i had the energy i'd make a Javascript thingy to just calculate my age and fill that in automatically.....</li>
-            </ul>
             <li>based in Pittsburgh PA</li>
             <li>
                 into all kinds of art and crafting, cozy games, TTRPGs,
@@ -229,3 +227,20 @@ const pageTitle = "about me";
 
     </div>
 </HomeLayout>
+<script>
+    // script written by chatgpt
+  import { DateTime } from "luxon";
+
+  function calculateAge(birthDateISO) {
+    const birthDate = DateTime.fromISO(birthDateISO);
+    const today = DateTime.now();
+
+    return Math.floor(today.diff(birthDate, "years").years);
+  }
+
+  const ageElement = document.getElementById("current-age");
+
+  if (ageElement) {
+    ageElement.textContent = calculateAge("1991-09-02").toString();
+  }
+</script>

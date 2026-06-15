@@ -1,3 +1,5 @@
+- 2026-06-15: added a function to automatically calculate my age on [about me](/aboutme) so i don't have to remember to update it anymore lol
+- 2026-06-14: added return-to-top button to blog and tutorial pages, fixed [tags page](/tags), finally updated my age in [about me](/aboutme) lol
 - 2026-04-15: added [experiments](/experiments) section and the first experiment, [speckle machine](/experiments/speckle)
 - 2025-03-22: added giscus comment widget to all pages! working on OC pages; first two now available.
 - 2025-03-16: took a much needed break this week! then came back and posted a [great big blog](/blog/2025-03-16-from-scratch/) replying to some other blog! also, shuffled around the OC page and made a general ["creating"](/creating) page. tweaked color themes and added background images to a few more.
